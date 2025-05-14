@@ -55,7 +55,8 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
-  position: relative;
+  position: fixed;
+  width: 100%;
 }
 
 .navbar-content {
@@ -64,8 +65,8 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
   max-width: 1080px;
-  margin: auto;
-  padding: 12px 20px;
+  margin: 0 auto;
+  padding: 12px 0px;
 }
 
 .logo {
@@ -205,8 +206,74 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+@media (max-width: 1120px) {
+  
+  .navbar-content {
+    margin: 0 20px;
+  }
+
+  .hero-section .content-container {
+    margin: 0 20px;
+  }
+
+}
+
+/* #endregion */
+
+/* #region - Hero Section */
+
+.hero-section {
+  padding: 125px 0px 125px;
+  /* background-color: orange; */
+}
+
+.hero-section .content-container {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+#i-am-text {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75em;
+}
+
+.hero-section p {
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .hero-section .content-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .hero-section {
+    padding: 105px 20px 60px;
+  }
+
+  #hero-text, #i-am-text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+  }
+
+  #hero-text p {
+    margin-top: 1em;
+  }
+}
+
 /* #endregion */
 
 html {
   background: red;
+}
+
+.content-container {
+  max-width: 1080px;
+  margin: auto;
 }
