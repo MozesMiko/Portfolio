@@ -245,6 +245,24 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
 }
 
+#typewriter-container {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#typewriter {
+  padding-right: 4px;
+  overflow: hidden;
+  border-right: 6px solid;
+  animation: blinkCaret 0.75s step-end infinite;
+}
+
+@keyframes blinkCaret {
+  50% {
+    border-color: transparent;
+  }
+}
+
 @media (max-width: 767px) {
   .hero-section .content-container {
     flex-direction: column;
