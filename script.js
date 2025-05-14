@@ -23,3 +23,51 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+//#region - Typewriter effect
+
+const words = ["UX Designer", "User Researcher", "Web Designer"];
+const typingSpeed = 50;
+const deletingSpeed = 50;
+const pauseBetween = 2000;
+
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+const typrewriter = document.getElementById("typewriter");
+const typewriterContainer = document.getElementById("typewriter-container");
+
+function setContainerHeight() {
+  const fontSize = parseInt(window.getComputedStyle(typewriter).fontSize, 10); // Get the font size of typewriter
+  typewriterContainer.style.height = `${fontSize * 1.2}px`; // Set the container height based on font size (add extra for margin)
+}
+
+function type() {
+  const currentWord = words[wordIndex];
+  if (isDeleting) {
+    typewriter.textContent = currentWord.substring(0, charIndex--);
+    if (charIndex < 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      setTimeout(type, typingSpeed);
+    } else {
+      setTimeout(type, deletingSpeed);
+    }
+  } else {
+    typewriter.textContent = currentWord.substring(0, charIndex++);
+    if (charIndex > currentWord.length) {
+      isDeleting = true;
+      setTimeout(type, pauseBetween);
+    } else {
+      setTimeout(type, typingSpeed);
+    }
+  }
+}
+
+setContainerHeight();
+type();
+
+window.addEventListener('resize', setContainerHeight);
+
+//endregion
