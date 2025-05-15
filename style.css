@@ -224,10 +224,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-section {
   padding: 125px 0px 125px;
-  /* background-color: orange; */
+  overflow-y: hidden;
 }
 
 .hero-section .content-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   gap: 100px;
@@ -244,6 +245,8 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section p {
   font-size: 20px;
 }
+
+/* #region - Typewriter */
 
 #typewriter-container {
   display: inline-block;
@@ -269,11 +272,52 @@ h1, h2, h3, h4, h5, h6 {
   50% {opacity: 0;}
 }
 
-@keyframes blinkCaret {
-  50% {
-    border-color: transparent;
-  }
+/* #endregion */
+
+/* #region - Blobs */
+
+.blob {
+  width: 500px;
+  aspect-ratio: 1/1;
+  background-color: #606f9e;
+  position: absolute;
+  top: -175px;
+  right: -200px;
+  z-index: -2;
+  border-radius: 30% 70% 70% 30% / 30% 40% 70% 70%;
+  filter: blur(75px);
+  animation: transform 12s linear infinite, 
+  rotate 12s linear infinite,
+  colorChange 6s ease-in-out infinite alternate;
 }
+
+@keyframes rotate {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+@keyframes transform {
+  0%, 
+  100% { border-radius: 30% 70% 70% 30% / 30% 40% 70% 70%; }
+  20% { border-radius: 40% 65% 50% 50% / 40% 35% 35% 65%; } 
+  40% { border-radius: 30% 65% 65% 35% / 65% 50% 50% 25%; } 
+  60% { border-radius: 40% 65% 50% 50% / 30% 30% 70% 75%; } 
+  80% { border-radius: 40% 60% 40% 60% / 50% 50% 50% 60%; } 
+}
+
+@keyframes colorChange {
+  0%,
+  50% {background-color: #5772C9}
+  100% {background-color: #606f9e}
+}
+
+.blob.two {
+  position: absolute;
+  top: 65%;
+  left: -175px;
+}
+
+/* #endregion */
 
 @media (max-width: 767px) {
   .hero-section .content-container {
@@ -300,7 +344,7 @@ h1, h2, h3, h4, h5, h6 {
 /* #endregion */
 
 html {
-  background: red;
+  background: #EFF5FB;
 }
 
 .content-container {
