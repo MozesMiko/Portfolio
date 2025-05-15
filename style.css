@@ -251,10 +251,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #typewriter {
-  padding-right: 4px;
-  overflow: hidden;
-  border-right: 6px solid;
-  animation: blinkCaret 0.75s step-end infinite;
+  position: relative;
+}
+
+#typewriter::after {
+  position: absolute;
+  top: 10%;
+  right: -10px;
+  content: "";
+  width: 6px;
+  height: 80%;
+  background-color: black;
+  animation: blink 0.75s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {opacity: 0;}
 }
 
 @keyframes blinkCaret {
