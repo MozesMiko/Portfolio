@@ -139,6 +139,11 @@ h1, h2, h3, h4, h5, h6 {
   transform: translate(-50%, 0) rotate(-45deg);
 }
 
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
 @media (max-width: 767px) {
 
   .navbar-content {
