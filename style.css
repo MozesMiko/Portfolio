@@ -205,18 +205,6 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-@media (max-width: 1120px) {
-  
-  .navbar-content {
-    margin: 0 20px;
-  }
-
-  .hero-section .content-container {
-    margin: 0 20px;
-  }
-
-}
-
 /* #endregion */
 
 /* #region - Hero Section */
@@ -350,4 +338,16 @@ html {
 .content-container {
   max-width: 1080px;
   margin: auto;
+}
+
+@media (max-width: 1120px) {
+  
+  .navbar-content {
+    margin: 0 20px;
+  }
+
+  .hero-section .content-container {
+    margin: 0 20px;
+  }
+
 }
