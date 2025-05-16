@@ -1,3 +1,5 @@
+//#region - Mobile navigation
+
 document.addEventListener("DOMContentLoaded", function () {
   const burger = document.querySelector('.burger-menu');
   const navLinks = document.querySelector('.nav-links');
@@ -23,6 +25,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// This piece of code below is responsible for disabling
+// the transitions so that the mobile nav-links does not 
+// flash briefly upon resizing the window
+
+let resizeTimer;
+window.addEventListener("resize", () => {
+  document.body.classList.add("resize-animation-stopper");
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.body.classList.remove("resize-animation-stopper");
+  }, 400);
+});
+
+//#endregion
 
 //#region - Typewriter effect
 
@@ -70,4 +87,4 @@ type();
 
 window.addEventListener('resize', setContainerHeight);
 
-//endregion
+//#endregion
