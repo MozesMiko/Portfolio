@@ -88,3 +88,22 @@ type();
 window.addEventListener('resize', setContainerHeight);
 
 //#endregion
+
+//#region - Dot grid highlight
+
+const dotGrid = document.getElementById('dot-grid');
+
+dotGrid.addEventListener('mousemove', (e) => {
+  const rect = dotGrid.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  dotGrid.style.setProperty('--x', `${x}px`);
+  dotGrid.style.setProperty('--y', `${y}px`);
+});
+
+dotGrid.addEventListener('mouseleave', () => {
+  dotGrid.style.setProperty('--x', `-9999px`);
+  dotGrid.style.setProperty('--y', `-9999px`);
+});
+
+//#endregion
