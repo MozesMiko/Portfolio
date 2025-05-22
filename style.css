@@ -223,15 +223,47 @@ h1, h2, h3, h4, h5, h6 {
 
 #dot-grid {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 20px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: radial-gradient(circle at 4px 4px, #E0E2E4 4px, transparent 0);
-  background-size: 60px 60px;
-  z-index: -3;
+  inset: 0;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+/* Light dots */
+#dot-grid::before,
+#dot-grid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: 45px 45px;
+  background-repeat: repeat;
+}
+
+/* Bottom layer – light dots (always visible) */
+#dot-grid::before {
+  background-image: radial-gradient(circle at 4px 4px, #E0E2E4 3px, transparent 0);
+  z-index: 0;
+}
+
+/* Top layer – dark dots revealed under cursor */
+#dot-grid::after {
+  background-image: radial-gradient(circle at 4px 4px, #cacbcd 4px, transparent 0); /* darker dot color */
+  mask-image: radial-gradient(circle 100px at var(--x, -9999px) var(--y, -9999px), white 0%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle 100px at var(--x, -9999px) var(--y, -9999px), white 0%, transparent 80%);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+  transition: mask-image 0.2s ease, -webkit-mask-image 0.2s ease;
+}
+
+#dot-grid {
+  z-index: 0;
+}
+
+.hero-section .content-container {
+  position: relative;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero-section .content-container {
@@ -350,6 +382,76 @@ h1, h2, h3, h4, h5, h6 {
 
 /* #endregion */
 
+/* region - About Me Section */
+
+.about-me-section {
+  position: relative;
+}
+
+.about-me-section .content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.about-me-section .section-content {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.about-me-section img {
+  max-width: 265px;
+}
+
+.text-and-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.text-and-cta a {
+  background-color: red;
+  display: inline-block;
+  width: fit-content;
+  margin-left: auto;
+}
+
+/* region - Floating particles*/
+
+.floating-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* #endregion*/
+
+@media (max-width: 767px) {
+
+  .about-me-section h1{
+    text-align: center;
+  }
+
+  .about-me-section .section-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-me-section a {
+    margin: auto;
+  }
+
+  .about-me-section img {
+    order: 3;
+  }
+}
+
+/* #endregion */
+
 html {
   background: #EFF5FB;
 }
@@ -359,14 +461,18 @@ html {
   margin: auto;
 }
 
+button {
+  cursor: pointer;
+}
+
 @media (max-width: 1120px) {
   
   .navbar-content {
     margin: 0 20px;
   }
 
-  .hero-section .content-container {
+  .hero-section .content-container,
+  .about-me-section .content-container {
     margin: 0 20px;
   }
-
 }
