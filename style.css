@@ -212,6 +212,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* #endregion */
 
+/* #region - Homepage */
+
 /* #region - Hero Section */
 
 .hero-section {
@@ -382,7 +384,100 @@ h1, h2, h3, h4, h5, h6 {
 
 /* #endregion */
 
-/* region - About Me Section */
+/* #region - Cases section */
+
+  .cases-section {
+    padding: 40px 0px;
+  }
+
+  .cases-section .content-container {
+    display: flex;
+    flex-direction: column;
+    container-type: inline-size;
+    gap: 40px;
+  }
+
+  .header-and-button {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .case-card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+
+  .case-thumbnail {
+    padding: 24px;
+    align-self: stretch;
+    width: 400px;
+    flex-shrink: 0;
+  }
+
+  .case-thumbnail img {
+    border-radius: 16px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .case-content {
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 32px 32px 32px 16px;
+  }
+
+  .case-information {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .tags-and-button {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tag-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tag-container p:nth-child(2)::before,
+  .tag-container p:nth-child(3)::before {
+    content: "\2022";
+    margin-right: 8px;
+  }
+
+  @container (max-width: 736px) {
+    .case-card {
+      flex-direction: column;
+    }
+
+    .case-thumbnail {
+      width: 100%;
+    }
+
+    .case-thumbnail img {
+      height: 272px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+/* #endregion */
+
+/* #region - About Me Section */
 
 .about-me-section {
   position: relative;
@@ -428,8 +523,6 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -1;
 }
 
-/* #endregion*/
-
 @media (max-width: 767px) {
 
   .about-me-section h1{
@@ -452,8 +545,31 @@ h1, h2, h3, h4, h5, h6 {
 
 /* #endregion */
 
+/* #endregion */
+
+/*#region - Cases page*/
+
+.header-and-display-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.display-control {
+  display: flex;
+}
+
+.display-control div {
+  aspect-ratio: 1/1;
+  height: 40px;
+  background: red;
+}
+
+/* #endregion*/
+
 html {
   background: #EFF5FB;
+  scrollbar-gutter: stable;
 }
 
 .content-container {
@@ -465,6 +581,10 @@ button {
   cursor: pointer;
 }
 
+.top-padding {
+  padding-top: 95px;
+}
+
 @media (max-width: 1120px) {
   
   .navbar-content {
@@ -472,7 +592,8 @@ button {
   }
 
   .hero-section .content-container,
-  .about-me-section .content-container {
+  .about-me-section .content-container,
+  .cases-section .content-container {
     margin: 0 20px;
   }
 }
