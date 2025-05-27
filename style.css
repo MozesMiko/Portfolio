@@ -593,7 +593,8 @@ button {
 
   .hero-section .content-container,
   .about-me-section .content-container,
-  .cases-section .content-container {
+  .cases-section .content-container,
+  .cases-page .content-container {
     margin: 0 20px;
   }
 }
