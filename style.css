@@ -689,6 +689,89 @@ h1, h2, h3, h4, h5, h6 {
 
 /* #endregion */
 
+/* #region - About me page*/
+
+.about-me-hero {  
+  padding-bottom: 40px
+}
+
+.about-me-hero .content-container {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  align-items: center;
+}
+
+#about-me-image {
+  max-width: 350px;
+}
+
+.about-me-intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-section {
+  padding: 40px 0px;
+  height: 500px;  
+}
+
+.skills-section .section-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.section-header::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #001021;
+}
+
+/* #region - Skill container */
+
+.skill-container-wapper {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.skill-container h2::after {
+  content: "";
+  display: block;
+  width: 75%;
+  height: 1px;
+  margin: 8px sauto;
+  background: #001021;
+}
+
+.skill-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* #endregion */
+
+@media (max-width: 767px) {
+  .about-me-hero .content-container {
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+  }
+
+}
+
+/* #endregion */
+
 /* #region - General */
 
 html {
@@ -718,7 +801,8 @@ button {
   .hero-section .content-container,
   .about-me-section .content-container,
   .cases-section .content-container,
-  .cases-page .content-container {
+  .cases-page .content-container,
+  .about-me-page .content-container {
     margin: 0 20px;
   }
 }
