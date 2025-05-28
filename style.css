@@ -602,7 +602,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .view-small .case-card {
   flex-direction: row;
-  flex: 1 1 0;
+  flex: 1 1 calc(50% - 20px);
+  max-width: calc(50% - 20px);
   min-width: 304px;
 }
 
@@ -633,6 +634,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .view-small .tags-and-button {
   justify-content: flex-end;
+}
+
+@container (max-width: 687px) {
+  .view-small .case-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 
 /* #endregion*/
