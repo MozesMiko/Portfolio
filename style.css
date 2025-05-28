@@ -509,6 +509,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   gap: 40px;
   container-type: inline-size;
+  margin-bottom: 40px;
 }
 
 /* #endregion*/
