@@ -691,6 +691,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* #region - About me page*/
 
+/* #region - About me - Hero section */
+
 .about-me-hero {  
   padding-bottom: 40px
 }
@@ -711,22 +713,47 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
 }
 
-.skills-section {
-  padding: 40px 0px;
-  height: 500px;  
+@media (max-width: 767px) {
+  .about-me-hero .content-container {
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+  }
+
 }
 
-.skills-section .section-header {
+/* #endregion */
+
+/* #region - About me - Skills section */
+
+.skills-section {
+  padding: 40px 0px;
+}
+
+.skills-section .content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.skills-section .section-header,
+.personal-section .section-header,
+.experience-section .section-header {
   display: flex;
   align-items: center;
   gap: 40px;
 }
 
-.section-header::after {
+.section-header::after,
+.experience-section .section-header::before {
   content: "";
   flex: 1;
   height: 1px;
   background: #001021;
+}
+
+.section-header.no-after::after {
+  content: none;
 }
 
 /* #region - Skill container */
@@ -739,9 +766,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .skill-container {
   display: flex;
+  flex: 1 1 0;
   flex-direction: column;
-  justify-content: center;
-  gap: 8px;
+  padding: 16px;
+  border-radius: 20px;
+  background-color: beige;
+}
+
+.skill-container li {
+  padding-top: 8px;
 }
 
 .skill-container h2::after {
@@ -749,7 +782,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 75%;
   height: 1px;
-  margin: 8px sauto;
+  margin: 8px auto;
   background: #001021;
 }
 
@@ -761,14 +794,55 @@ h1, h2, h3, h4, h5, h6 {
 
 /* #endregion */
 
-@media (max-width: 767px) {
-  .about-me-hero .content-container {
-    flex-direction: column;
-    gap: 50px;
-    text-align: center;
-  }
+/* #endregion */
 
+/* #region - About me - About me section */
+
+.personal-section {
+  padding: 40px 0px;  
 }
+
+.personal-section .content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.personal-content {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+} 
+
+/* #endregion */
+
+/* #region - About me - Experience section */
+
+.experience-section {
+  padding: 40px 0px;
+}
+
+.experience-section .content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.experience {
+  max-width: 800px;
+  background-color: orange;
+  height: 250px;
+}
+
+/* #endregion */
 
 /* #endregion */
 
