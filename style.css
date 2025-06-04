@@ -223,6 +223,10 @@ h1, h2, h3, h4, h5, h6 {
   overflow-x: clip;
 }
 
+#hero-image {
+  max-width: 300px;
+}
+
 #dot-grid {
   position: absolute;
   inset: 0;
@@ -691,35 +695,32 @@ h1, h2, h3, h4, h5, h6 {
 
 /* #region - About me page*/
 
+.skills-section,
+.experience-section {
+  background-color: white;
+}
+
 /* #region - About me - Hero section */
 
 .about-me-hero {  
   padding-bottom: 40px
 }
 
-.about-me-hero .content-container {
+.about-me-hero .content-container,
+.personal-text .content-container {
   display: flex;
   flex-direction: row;
   gap: 100px;
   align-items: center;
 }
 
-#about-me-image {
+#about-me-hero-img {
   max-width: 350px;
 }
 
 .about-me-intro {
   display: flex;
   flex-direction: column;
-}
-
-@media (max-width: 767px) {
-  .about-me-hero .content-container {
-    flex-direction: column;
-    gap: 50px;
-    text-align: center;
-  }
-
 }
 
 /* #endregion */
@@ -738,7 +739,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .skills-section .section-header,
 .personal-section .section-header,
-.experience-section .section-header {
+.experience-section .section-header,
+.education-section .section-header {
   display: flex;
   align-items: center;
   gap: 40px;
@@ -761,6 +763,8 @@ h1, h2, h3, h4, h5, h6 {
 .skill-container-wapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 40px;
 }
 
@@ -771,6 +775,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 16px;
   border-radius: 20px;
   background-color: beige;
+  max-width: 350px;
+  min-width: 300px;
 }
 
 .skill-container li {
@@ -814,35 +820,98 @@ h1, h2, h3, h4, h5, h6 {
   gap: 100px;
 } 
 
+#about-me-working {
+  max-width: 315px;
+  border-radius: 24px;
+}
+
+.personal-text p:nth-child(2){
+  margin: 8px 0px;
+}
+
 /* #endregion */
 
-/* #region - About me - Experience section */
+/* #region - About me - Experience & Education section */
 
 .experience-section {
   padding: 40px 0px;
 }
 
-.experience-section .content-container {
+.education-section {
+  padding: 40px 0px 60px 0px;
+}
+
+.experience-section .content-container,
+.education-section .content-container {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
-.experience-container {
+.experience-container,
+.education-container {
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
+  margin: auto;
   align-items: stretch;
   gap: 20px;
 }
 
-.experience {
+.experience,
+.education {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
   max-width: 800px;
-  background-color: orange;
-  height: 250px;
+}
+
+.no-max-width {
+  max-width: none;
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experience-header,
+.education-header {
+  display: flex;
+  gap: 12px;
+}
+
+.position,
+.university {
+  font-weight: bold;
 }
 
 /* #endregion */
+
+@media (max-width: 767px) {
+  .about-me-hero .content-container,
+  .personal-content {
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .about-me-hero img {
+    order: 3;
+  }
+
+}
+
+@media (max-width: 550px) {
+  .experience-header,
+  .education-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+}
 
 /* #endregion */
 
