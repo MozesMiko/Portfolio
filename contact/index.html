@@ -3,9 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cases</title>
+  <link rel="icon" type="image/x-icon" href="/img/shared_assets/favicon.ico">
+  <link rel="stylesheet" href="/style.css">
+  <title>Contact me</title>
 </head>
-<body>
-  This is the contact page
+<body class="contact-page">
+   <nav class="navbar">
+    <div class="navbar-content">
+      <div class="logo">
+        <a href="index.html"><img src="/img/shared_assets/mozeslogo.svg" alt=""></a>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/cases">Cases</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="theme-and-burger">
+        <div class="theme-control"><img src="/img/shared_assets/moon.svg" alt=""></div>
+        <div class="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="content-container">
+    <div class="contact-element">
+      <img src="/img/contact_me/contact-me-light.webp" alt="">
+      <div class="contact-form-container">
+        <div class="contact-banner">
+          <img src="/img/about_me/about_me_hero.webp" alt="">
+          <div class="contact-banner-text">
+            <p class="banner-top-row">Do I seem like the right match?</p>
+            <p class="banner-bottom-row">Let's get in touch today!</p>
+          </div>
+        </div>
+        <form action="">
+          <div class="form-name-and-email">
+            <div class="form-name-container">
+              <label for="name">Your name</label>
+              <input type="text" placeholder="Name Surname" name="name" id="name">
+            </div>
+            <div class="form-email-container">
+              <label for="email">Email</label>
+              <input type="email" placeholder="name@email.com" name="email" id="email">
+            </div>            
+          </div>
+          <div class="form-message">
+            <label for="message">Your message</label>
+            <textarea placeholder="Type your message here" name="message" id="message"
+            rows="3"></textarea>
+          </div>
+          <input type="submit" value="Send message" id="form-submit-btn">
+        </form>
+        <div class="separator"><p>or</p></div>
+        <div class="contact-method-container">
+          <div class="contact-method">
+            <div class="contact-method-text">
+              <p class="content-method-top-row">Email me directly</p>
+              <p class="content-method-bottom-row">This is an example text</p>
+            </div>
+            <div class="contact-method-icon-container">
+              <img src="/img/shared_assets/moon.svg" alt="">
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-method-text">
+              <p class="content-method-top-row">Give me a call</p>
+              <p class="content-method-bottom-row">This is an example text</p>
+            </div>
+            <div class="contact-method-icon-container">
+              <img src="/img/shared_assets/moon.svg" alt="">
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-method-text">
+              <p class="content-method-top-row">Add me to your network</p>
+              <p class="content-method-bottom-row">Connect on LinkedIn</p>
+            </div>
+            <div class="contact-method-icon-container">
+              <img src="/img/shared_assets/moon.svg" alt="">
+            </div>
+          </div>
+          <div class="contact-method">
+            <div class="contact-method-text">
+              <p class="content-method-top-row">Check out my other work</p>
+              <p class="content-method-bottom-row">See my code on Github</p>
+            </div>
+            <div class="contact-method-icon-container">
+              <img src="/img/shared_assets/moon.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/javascript/script.js"></script>
 </body>
 </html>
