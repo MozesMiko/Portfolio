@@ -1073,12 +1073,6 @@ textarea {
   line-height: 14px;
 }
 
-/* #region - Contact form*/
-
-
-
-/* #endregion */
-
 @media (max-width: 767px) {
   .contact-element {
     flex-direction: column;
@@ -1098,11 +1092,88 @@ textarea {
 
 /* #endregion */
 
+/* #region - Case page */
+
+.case-page .content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.case-header-img {
+  border-radius: 24px;
+}
+
+.content-and-index {
+  display: flex;
+  gap: 40px;
+}
+
+.case-description {
+  flex: 3 1 0;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);
+}
+
+.case-index {  
+  flex: 2 1 0;
+  position: sticky;
+  align-self: flex-start;
+  order: 2;
+  top: 94px;
+  padding: 16px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);
+}
+
+.case-index ol {  
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.case-index li {
+  font-size: 18px;
+}
+
+.case-index li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.case-index li a {
+  text-decoration: none;
+  color: black;
+}
+
+.case-description > section {
+  scroll-margin-top: 74px;
+}
+
+@media (max-width: 767px) {
+  .content-and-index {
+    flex-direction: column;
+  }
+
+  .case-index {
+    order: 0;
+    position: relative;
+    top: 0;
+    align-self: stretch;
+  }
+}
+
+
+/* #endregion */
+
 /* #region - General */
 
 html {
   background: #EFF5FB;
   scrollbar-gutter: stable;
+  scroll-behavior: smooth;
 }
 
 .content-container {
@@ -1129,7 +1200,8 @@ button {
   .cases-section .content-container,
   .cases-page .content-container,
   .about-me-page .content-container,
-  .contact-page .content-container {
+  .contact-page .content-container,
+  .case-page .content-container {
     margin: 0 20px;
   }
 }
