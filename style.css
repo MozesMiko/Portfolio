@@ -1120,6 +1120,7 @@ textarea {
 
 .case-index {  
   flex: 2 1 0;
+  min-width: 0;
   position: sticky;
   align-self: flex-start;
   order: 2;
@@ -1130,13 +1131,16 @@ textarea {
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);
 }
 
-.case-index ol {  
-  list-style-position: inside;
+.case-index ol {
   padding-left: 0;
+  margin: 0;
 }
 
 .case-index li {
+  display: flex;
+  align-items: center;
   font-size: 18px;
+  min-width: 0; /* allow shrinking */
 }
 
 .case-index li:not(:last-child) {
@@ -1144,8 +1148,35 @@ textarea {
 }
 
 .case-index li a {
+  position: relative;
+  gap: 8px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-right: 8px;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-decoration: none;
+  color: gray;
+}
+
+.case-index li.active a {
   color: black;
+}
+
+.case-index li ::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  content: url(/img/case-page/check.svg);
+}
+
+.case-index li.active::after {
+  opacity: 1;
+  content: url(/img/case-page/check.svg);
 }
 
 .case-description > section {
