@@ -147,3 +147,31 @@ if(document.querySelector('.card-container')) {
 }
 
 //#endregion
+
+/* #region - Add .active to index list items */
+
+const sections = document.querySelectorAll('section');
+const indexElements = document.querySelectorAll('.case-index li');
+
+window.addEventListener("scroll", () => {
+  let scrollPosition = window.scrollY + 200;
+
+  sections.forEach(section => {
+    const sectionId = section.getAttribute('id');
+
+    indexElements.forEach(indexElement => {
+      const link = indexElement.querySelector('a');
+      const linkId = link.getAttribute('href').substring(1);
+
+      if (linkId === sectionId) {
+        if (scrollPosition >= section.offsetTop) {
+          indexElement.classList.add('active');  // Section is past offset -> add active
+        } else {
+          indexElement.classList.remove('active');  // Section above offset -> remove active
+        }
+      }
+    });
+  });
+});
+
+/* #endregion */

@@ -848,6 +848,20 @@ h1, h2, h3, h4, h5, h6 {
   gap: 40px;
 }
 
+.experience {
+  background-color: #EFF5FB;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.15);
+}
+
+.education {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);
+}
+
 .experience-container,
 .education-container {
   display: flex;
@@ -855,7 +869,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-basis: 100%;
   margin: auto;
   align-items: stretch;
-  gap: 20px;
+  gap: 40px;
 }
 
 .experience,
@@ -863,11 +877,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: flex-start;
   gap: 24px;
-  max-width: 800px;
-}
-
-.no-max-width {
-  max-width: none;
 }
 
 .experience-content {
@@ -900,10 +909,14 @@ h1, h2, h3, h4, h5, h6 {
   .about-me-hero img {
     order: 3;
   }
-
 }
 
 @media (max-width: 550px) {
+  .experience {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .experience-header,
   .education-header {
     flex-direction: column;
@@ -1115,7 +1128,7 @@ textarea {
   padding: 24px;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);
 }
 
 .case-index {  
@@ -1128,7 +1141,7 @@ textarea {
   padding: 16px;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);
 }
 
 .case-index ol {
@@ -1152,13 +1165,14 @@ textarea {
   gap: 8px;
   flex-grow: 1;
   flex-shrink: 1;
-  margin-right: 8px;
+  padding-right: 20px;
   min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   text-decoration: none;
   color: gray;
+  transition: color 0.4s ease;
 }
 
 .case-index li.active a {
@@ -1171,16 +1185,47 @@ textarea {
   top: 0;
   right: 0;
   opacity: 0;
+  transition: opacity 0.4s ease;
   content: url(/img/case-page/check.svg);
 }
 
-.case-index li.active::after {
+.case-index li.active ::after {
   opacity: 1;
   content: url(/img/case-page/check.svg);
 }
 
 .case-description > section {
   scroll-margin-top: 74px;
+}
+
+.cta-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  gap: 12px;
+  padding: 24px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);
+  container-type: inline-size;
+}
+
+.cta-button-container {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.case-image {
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {
@@ -1194,8 +1239,18 @@ textarea {
     top: 0;
     align-self: stretch;
   }
+
+  .cta-container {
+    flex-direction: column;
+  }
+
+  @container (max-width: 450px) {
+  .cta-button-container {
+    justify-content: center;
+  }
 }
 
+}
 
 /* #endregion */
 
