@@ -1,0 +1,215 @@
+/* #region - CSS reset  */
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+/* #endregion */
+
+/* #region - Fonts */
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400;
+  src: url('/fonts/poppins-regular-webfont.woff2') format('woff2'),
+       url('/fonts/poppins-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 500;
+  src: url('/fonts/poppins-medium-webfont.woff2') format('woff2'),
+       url('/fonts/poppins-medium-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 600;
+  src: url('/fonts/poppins-semibold-webfont.woff2') format('woff2'),
+       url('/fonts/poppins-semibold-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 700;
+  src: url('/fonts/poppins-bold-webfont.woff2') format('woff2'),
+       url('/fonts/poppins-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Figtree';
+  font-weight: 400;
+  src: url('/fonts/Figtree-Regular.woff2') format('woff2'),
+       url('/fonts/Figtree-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Figtree';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/Figtree-Italic.woff2') format('woff2'),
+       url('/fonts/Figtree-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Figtree';
+  font-weight: 600;
+  src: url('/fonts/Figtree-Bold.woff2') format('woff2'),
+       url('/fonts/Figtree-Bold.woff') format('woff');
+}
+
+/* #endregion */
+
+/* #region - Variables */
+
+:root {
+  --main-color: #EFF5FB;
+  --secondary-color: #FFFFFF;
+  --tertiary-color: #F1F3FF;
+  --accent-color: #DD7373;
+  --accent-color-2: #E79C9C;
+  --text-color: #001021;
+  --text-white: #FFFFFF;
+  --typewriter-color: #DD7373;
+
+  --grayscale-100: #000000;
+  --grayscale-80: #333333;
+  --grayscale-60: #666666;
+  --grayscale-40: #999999;
+  --grayscale-20: #CCCCCC;
+  --grayscale-0: #FFFFFF;
+
+  --nav-footer: #FFFFFF99;
+  --skill-card: #FFFFFF80;
+
+  --blob-color-1: #899EE1;
+  --blob-color-2: #5772C9;
+
+  --particle-smallest: #C2B9F8FF;
+  --particle-small: #C2B9F866;
+  --particle-large: #C2B9F833;
+  --particle-large: #C2B9F81A;
+
+  --dot-grid-light: #D9D9D9B3;
+  --dot-grid-dark: #D9D9D91A;
+
+  --transition-delay: 0.5s
+}
+
+.dark {
+  --main-color: #0B132B;
+  --secondary-color: #1C2541;
+  --tertiary-color: #353950;
+  --accent-color: #3A506B;
+  --accent-color-2: #476385;
+  --text-color: #FFFFFF;
+  --typewriter-color: #30C5FF;
+
+  --nav-footer: #00000099;
+  --skill-card: #E6E6E699;
+
+  --blob-color-1: #1F347C;
+  --blob-color-2: #6676AC;
+
+  --particle-smallest: #5E5499FF;
+  --particle-small: #5E549966;
+  --particle-large: #5E549933;
+  --particle-large: #5E54991A;
+}
+
+/* #endregion */
+
+body {
+  background: var(--main-color);
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+body, body * {
+  transition: 
+    color var(--transition-delay), 
+    background-color var(--transition-delay);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+p {
+  font-family: 'Figtree', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.content-container {
+  max-width: 1080px;
+  margin: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.top-padding {
+  padding-top: 95px;
+}
+
+@media (max-width: 1120px) {
+  
+  /* .navbar-content {
+    margin: 0 20px;
+  } */
+
+  .navbar-content,
+  .hero-section .content-container,
+  .about-me-section .content-container,
+  .cases-section .content-container,
+  .cases-page .content-container,
+  .about-me-page .content-container,
+  .contact-page .content-container,
+  .case-page .content-container {
+    margin: 0 20px;
+  }
+}

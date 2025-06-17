@@ -1,0 +1,35 @@
+.header-and-display-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.display-control {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.display-control div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  height: 40px;
+  background: #E79C9C;
+  cursor: pointer;
+}
+
+.cases-page .content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  container-type: inline-size;
+  margin-bottom: 40px;
+}
