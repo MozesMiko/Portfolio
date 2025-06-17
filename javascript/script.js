@@ -148,7 +148,7 @@ if(document.querySelector('.card-container')) {
 
 //#endregion
 
-/* #region - Add .active to index list items */
+// #region - Add .active to index list items
 
 const sections = document.querySelectorAll('section');
 const indexElements = document.querySelectorAll('.case-index li');
@@ -174,4 +174,14 @@ window.addEventListener("scroll", () => {
   });
 });
 
-/* #endregion */
+// #endregion
+
+// #region - Dark theme toggle
+
+const themeToggle = document.querySelector('.theme-control');
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle('dark')
+})
+
+// #endregion
