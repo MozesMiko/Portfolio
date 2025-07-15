@@ -196,6 +196,14 @@ button {
   padding-top: 95px;
 }
 
+.no-animate .case-card,
+.no-animate .case-thumbnail,
+.no-animate .case-card-text,
+.no-animate .tag-container,
+.no-animate .case-content h1 {
+  transition: none !important;
+}
+
 @media (max-width: 1120px) {
   
   /* .navbar-content {

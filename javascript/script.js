@@ -1,3 +1,13 @@
+//#region - Don't animate cards
+
+window.addEventListener("load", () => {
+  requestAnimationFrame(() => {
+    document.body.classList.remove("no-animate");
+  });
+});
+
+//#endregion
+
 //#region - Mobile navigation
 
 document.addEventListener("DOMContentLoaded", function () {
