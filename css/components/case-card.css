@@ -6,6 +6,7 @@
   background-color: white;
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .case-thumbnail {
@@ -13,20 +14,26 @@
   align-self: stretch;
   width: 400px;
   flex-shrink: 0;
+  max-height: 300px;
+  max-width: 100%;
+  opacity: 1;
+  transition: all 0.2s ease;
+  overflow: hidden;
 }
 
 .case-thumbnail img {
   border-radius: 16px;
-  height: 100%;
+  max-height: 100%;
   object-fit: cover;
+  transition: all 0.3s ease;
 }
 
 .case-content {
-  /* background-color: yellow; */
   display: flex;
   flex-direction: column;
   gap: 48px;
   padding: 32px 32px 32px 16px;
+  transition: padding 0.3s ease, flex-direction 0.3s ease;
 }
 
 .case-information {
@@ -47,6 +54,15 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.case-card-text,
+.tag-container {
+  max-height: 120px;
+  max-width: 100%;
+  opacity: 1;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .tag-container p:nth-child(2)::before,
@@ -92,7 +108,9 @@
 
 .view-small .case-card-text,
 .view-small .tag-container {
-  display: none;
+  max-height: 0;
+  max-width: 0;
+  opacity: 0;
 }
 
 .view-small .case-thumbnail {
@@ -151,7 +169,10 @@
 .view-row .case-card-text,
 .view-row .tag-container,
 .view-row .case-thumbnail {
-  display: none;
+  opacity: 0;
+  max-height: 0;
+  max-width: 0;
+  overflow: hidden;
 }
 
 .view-row .case-content {
@@ -164,6 +185,10 @@
 .view-row .case-content h1 {
   font-size: 18px;
   font-weight: normal;
+}
+
+.view-row .case-information {
+  gap: 0px;
 }
 
 /* #endregion */
