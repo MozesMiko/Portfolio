@@ -221,6 +221,7 @@
   .header-and-button {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: var(--text-color);
   }
 
@@ -259,7 +260,6 @@
 }
 
 .text-and-cta a {
-  background-color: red;
   display: inline-block;
   width: fit-content;
   margin-left: auto;
