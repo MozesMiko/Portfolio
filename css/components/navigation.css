@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: var(--nav-footer);
   backdrop-filter: blur(10px);
   position: fixed;
   width: 100%;
@@ -16,9 +16,10 @@
   padding: 12px 0px;
 }
 
-.logo {
+.logo svg{
   width: 30px;
   height: 30px;
+  color: var(--text-color);
 }
 
 .nav-links ul {
@@ -30,8 +31,9 @@
 }
 
 .navbar li a {
+  font-family: 'Figtree', sans-serif;
   text-decoration: none;
-  color: #001021;
+  color: var(--text-color);
 }
 
 .theme-and-burger {
@@ -41,6 +43,7 @@
 
 .theme-control {
   cursor: pointer;
+  color: var(--text-color);
 }
 
 .burger-menu {
