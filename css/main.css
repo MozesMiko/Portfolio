@@ -141,6 +141,7 @@ h1, h2, h3, h4, h5, h6 {
 
   --button-text-color: var(--text-white);
   --button-bg-color: var(--accent-color);
+  --button-inactive-color: #EBABAB;
   --button-hover-color: var(--accent-color-2);
   --button-active-color: var(--accent-color-3);
   --card-background: var(--secondary-color);
@@ -171,6 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 
   --button-text-color: var(--text-color);
   --button-bg-color: var(--accent-color);
+  --button-inactive-color: #8996A6;
   --button-hover-color: var(--accent-color-2);
   --button-active-color: var(--accent-color-3);
   --card-background: var(--tertiary-color);

@@ -11,20 +11,6 @@
   overflow: hidden;
 }
 
-.display-control div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  aspect-ratio: 1/1;
-  height: 40px;
-  background: #E79C9C;
-  cursor: pointer;
-}
-
-.display-control-btn svg {
-  color: var(--button-text-color);
-}
-
 .cases-page .content-container {
   display: flex;
   flex-direction: column;

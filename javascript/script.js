@@ -151,6 +151,8 @@ if(document.querySelector('.card-container')) {
     displayControlButtons[i].addEventListener("click", () => {
       caseContainer.className = "card-container";
       caseContainer.classList.add(displayControlButtons[i].id);
+      displayControlButtons.forEach(btn => btn.classList.remove('active'));
+      displayControlButtons[i].classList.add('active');
     });
   }
 
