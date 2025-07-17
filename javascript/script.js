@@ -204,8 +204,28 @@ window.addEventListener("scroll", () => {
 
 const themeToggle = document.querySelector('.theme-control');
 
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle('dark')
-})
+// Apply stored theme on page load
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark');
+} else if (savedTheme === 'light') {
+  document.body.classList.remove('dark');
+} else {
+  // Detect system preference on first visit
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (prefersDark) {
+    document.body.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+// Handle toggle
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const isDark = document.body.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+}
 
 // #endregion

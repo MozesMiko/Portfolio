@@ -46,6 +46,7 @@
 
 .display-control-btn.active {
   background-color: var(--button-bg-color);
+  pointer-events: none;
 }
 
 .display-control-btn:not(.active):hover {
