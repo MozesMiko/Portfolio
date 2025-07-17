@@ -129,33 +129,30 @@ if(document.querySelector('#dot-grid')) {
 
 if(document.querySelector('.card-container')) {
 
-  // const caseContainer = document.querySelector('.card-container');
-  // const largeCards = document.querySelector('#large-cards');
-  // const smallCards = document.querySelector('#view-small');
-  // const rowCards = document.querySelector('#view-row');
-
-  // smallCards.addEventListener("click", () => {
-  //   caseContainer.className = "card-container";
-  //   caseContainer.classList.add('view-small');
-  // });
-
-  // rowCards.addEventListener("click", () => {    
-  //   caseContainer.className = "card-container";
-  //   caseContainer.classList.add('view-row');
-  // });
-
   const caseContainer = document.querySelector('.card-container');
   const displayControlButtons = document.querySelectorAll('.display-control-btn');
 
-  for(let i = 0; i < displayControlButtons.length; i++) {
+  for (let i = 0; i < displayControlButtons.length; i++) {
     displayControlButtons[i].addEventListener("click", () => {
+      const viewClass = displayControlButtons[i].id;
+
       caseContainer.className = "card-container";
-      caseContainer.classList.add(displayControlButtons[i].id);
+      caseContainer.classList.add(viewClass);
+
       displayControlButtons.forEach(btn => btn.classList.remove('active'));
       displayControlButtons[i].classList.add('active');
+
+      const cardButtons = caseContainer.querySelectorAll('.case-card a.button');
+
+      cardButtons.forEach(btn => {
+        if (viewClass === "view-small" || viewClass === "view-row") {
+          btn.classList.remove("large");
+        } else {
+          btn.classList.add("large");
+        }
+      });
     });
   }
-
 }
 
 //#endregion
