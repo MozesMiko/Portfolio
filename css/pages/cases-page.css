@@ -23,4 +23,11 @@
   gap: 40px;
   container-type: inline-size;
   margin-bottom: 40px;
+  transition: opacity 0.2s ease;
+  opacity: 1;
+}
+
+.card-container.fade-out {
+  opacity: 0;
+  pointer-events: none;
 }

@@ -136,21 +136,29 @@ if(document.querySelector('.card-container')) {
     displayControlButtons[i].addEventListener("click", () => {
       const viewClass = displayControlButtons[i].id;
 
-      caseContainer.className = "card-container";
-      caseContainer.classList.add(viewClass);
+      caseContainer.classList.add('fade-out');
 
-      displayControlButtons.forEach(btn => btn.classList.remove('active'));
-      displayControlButtons[i].classList.add('active');
+      setTimeout(() => {
+        caseContainer.classList.remove('view-default', 'view-small', 'view-row');
+        caseContainer.classList.add(viewClass);
 
-      const cardButtons = caseContainer.querySelectorAll('.case-card a.button');
+        displayControlButtons.forEach(btn => btn.classList.remove('active'));
+        displayControlButtons[i].classList.add('active');
 
-      cardButtons.forEach(btn => {
-        if (viewClass === "view-small" || viewClass === "view-row") {
-          btn.classList.remove("large");
-        } else {
-          btn.classList.add("large");
-        }
-      });
+        const cardButtons = caseContainer.querySelectorAll('.case-card a.button');
+
+        cardButtons.forEach(btn => {
+          if (viewClass === "view-small" || viewClass === "view-row") {
+            btn.classList.remove("large");
+          } else {
+            btn.classList.add("large");
+          }
+        });
+
+        caseContainer.classList.remove('fade-out');
+
+      }, 200);
+      
     });
   }
 }
