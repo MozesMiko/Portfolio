@@ -127,38 +127,45 @@ if(document.querySelector('#dot-grid')) {
 
 //#region - Case card display
 
-if(document.querySelector('.card-container')) {
+if (document.querySelector('.card-container')) {
 
   const caseContainer = document.querySelector('.card-container');
   const displayControlButtons = document.querySelectorAll('.display-control-btn');
+
+  function applyView(viewClass) {
+    caseContainer.classList.remove('view-default', 'view-small', 'view-row');
+    caseContainer.classList.add(viewClass);
+
+    // Update active state on buttons
+    displayControlButtons.forEach(btn => {
+      btn.classList.toggle('active', btn.id === viewClass);
+    });
+
+    // Update large class on inner buttons
+    const cardButtons = caseContainer.querySelectorAll('.case-card a.button');
+    cardButtons.forEach(btn => {
+      if (viewClass === "view-small" || viewClass === "view-row") {
+        btn.classList.remove("large");
+      } else {
+        btn.classList.add("large");
+      }
+    });
+  }
+
+  const savedView = localStorage.getItem('selectedView') || 'view-default';
+  applyView(savedView);
 
   for (let i = 0; i < displayControlButtons.length; i++) {
     displayControlButtons[i].addEventListener("click", () => {
       const viewClass = displayControlButtons[i].id;
 
+      localStorage.setItem('selectedView', viewClass);
       caseContainer.classList.add('fade-out');
 
       setTimeout(() => {
-        caseContainer.classList.remove('view-default', 'view-small', 'view-row');
-        caseContainer.classList.add(viewClass);
-
-        displayControlButtons.forEach(btn => btn.classList.remove('active'));
-        displayControlButtons[i].classList.add('active');
-
-        const cardButtons = caseContainer.querySelectorAll('.case-card a.button');
-
-        cardButtons.forEach(btn => {
-          if (viewClass === "view-small" || viewClass === "view-row") {
-            btn.classList.remove("large");
-          } else {
-            btn.classList.add("large");
-          }
-        });
-
+        applyView(viewClass);
         caseContainer.classList.remove('fade-out');
-
       }, 200);
-      
     });
   }
 }
