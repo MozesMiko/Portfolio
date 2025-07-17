@@ -255,7 +255,8 @@
 }
 
 @media (max-width: 550px) {
-  .experience {
+  .experience,
+  .education {
     flex-direction: column;
     align-items: center;
   }

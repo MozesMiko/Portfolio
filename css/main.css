@@ -154,6 +154,11 @@ h1, h2, h3, h4, h5, h6 {
   --experience-background: var(--main-color);
   --education-background: var(--secondary-color);
 
+  --contact-element-bg: var(--tertiary-color);
+  --contact-element-shadow: #02041D26;
+  --input-bg-color: var(--secondary-color);
+  --input-border-color: var(--grayscale-20);
+
   --transition-delay: 0.5s
 }
 
@@ -190,6 +195,13 @@ h1, h2, h3, h4, h5, h6 {
   --skill-container-background: #FFFFFF80;
   --experience-background: var(--accent-color);
   --education-background: var(--accent-color);
+
+  --contact-element-bg: var(--secondary-color);
+  --contact-element-shadow: #1E4EBD;
+  --input-bg-color: var(--accent-color);
+  --input-border-color: var(--grayscale-0);
+
+  
 }
 
 /* #endregion */

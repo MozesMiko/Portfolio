@@ -6,15 +6,28 @@
 
 .contact-element {
   display: flex;
-  background-color: #F1F3FF;
+  color: var(--text-color);
+  background-color: var(--contact-element-bg);
   border-radius: 24px;
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 10px 3px var(--contact-element-shadow);
   overflow: hidden;
 }
 
 .contact-element img {
   max-width: 50%;
   object-fit: cover;
+}
+
+#contact-image-dark {
+  display: none;
+}
+
+body.dark #contact-image-dark {
+  display: block;
+}
+
+body.dark #contact-image-light {
+  display: none;
 }
 
 .contact-form-container {
@@ -53,6 +66,7 @@ form {
 
 label {
   font-size: 14px;
+  font-family: 'Figrtee', sans-serif;
 }
 
 input,
@@ -60,7 +74,15 @@ textarea {
   margin-top: 4px;
   padding: 4px 8px;
   border-radius: 6px;
+  font-family: 'Figtree', sans-serif;
+  color: var(--text-color);
+  border: 1px solid var(--input-border-color);
+  background-color: var(--input-bg-color);
   resize: none;
+}
+
+::placeholder {
+  color: var(--grayscale-20);
 }
 
 .contact-form-container img {
