@@ -6,6 +6,7 @@
   line-height: 20px;
   padding: 8px 16px;
   border-radius: 4px;
+  border: none;
   color: var(--button-text-color);
   background-color: var(--button-bg-color);
   text-decoration: none;

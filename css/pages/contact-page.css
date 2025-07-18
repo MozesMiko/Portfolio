@@ -125,7 +125,7 @@ textarea {
   align-items: center;
   width: 80%;
   gap: 1rem;
-  color: #001021;
+  color: var(--contact-separator);
   font-weight: bold;
 }
 
@@ -134,8 +134,10 @@ textarea {
   content: "";
   flex: 1;
   height: 1px;
-  background: #001021;
+  background: var(--contact-separator);
 }
+
+/* #region - Contact method buttons */
 
 .contact-method-container {
   display: flex;
@@ -145,14 +147,19 @@ textarea {
 
 .contact-method {
   display: flex;
-  flex-grow: 1;
+  flex: 1 1 calc(50% - 8px);
+  /* flex-basis: calc(50% - 8px); */
   justify-content: space-between;
   align-items: center;
   gap: 8px;
-  background-color: white;
-  border: 1px solid gray;
+  background-color: var(--contact-method-bg);
+  border: 1px solid var(--input-border-color);
   border-radius: 8px;
   padding: 12px 16px;
+}
+
+body.dark .contact-method {
+  border: 1px solid var(--accent-color);
 }
 
 .contact-method-icon-container {
@@ -161,20 +168,45 @@ textarea {
   align-items: center;
   height: 26px;
   width: 26px;
-  border: 1px solid black;
+  border: 1px solid var(--contact-method-icon);
   border-radius: 4px;
+}
+
+.contact-method-icon-container svg {
+  color: var(--contact-method-icon);
 }
 
 .content-method-top-row {
   font-size: 12px;
   line-height: 12px;
   margin-bottom: 6px;
+  color: var(--contact-method-top-row);
 }
 
 .content-method-bottom-row {
   font-size: 14px;
   line-height: 14px;
+  min-width: 18ch;
+  white-space: nowrap;
 }
+
+#emailContact, 
+#phoneContact,
+#linkedInContact,
+#githubContact {
+  cursor: pointer;
+}
+
+.no-pointer {
+  cursor: default !important;
+}
+
+a.contact-method {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* #endregion */
 
 @media (max-width: 767px) {
   .contact-element {

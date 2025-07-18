@@ -158,6 +158,11 @@ h1, h2, h3, h4, h5, h6 {
   --contact-element-shadow: #02041D26;
   --input-bg-color: var(--secondary-color);
   --input-border-color: var(--grayscale-20);
+  --contact-method-bg: var(--secondary-color);
+  --contact-method-icon: var(--grayscale-40);
+  --contact-method-top-row: var(--grayscale-60);
+  --contact-separator: var(--accent-color);
+
 
   --transition-delay: 0.5s
 }
@@ -199,9 +204,12 @@ h1, h2, h3, h4, h5, h6 {
   --contact-element-bg: var(--secondary-color);
   --contact-element-shadow: #1E4EBD;
   --input-bg-color: var(--accent-color);
-  --input-border-color: var(--grayscale-0);
+  --input-border-color: var(--grayscale-40);
+  --contact-method-bg: var(--accent-color);
+  --contact-method-icon: var(--grayscale-20);
+  --contact-method-top-row: var(--grayscale-20);
+  --contact-separator: var(--accent-color-2);
 
-  
 }
 
 /* #endregion */
