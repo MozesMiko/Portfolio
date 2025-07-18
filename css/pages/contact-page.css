@@ -32,7 +32,7 @@
   transition: opacity var(--transition-delay) ease;
 }
 
-body.dark #contact-image-dark {
+html.dark #contact-image-dark {
   opacity: 1;
 }
 
