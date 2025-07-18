@@ -13,21 +13,27 @@
   overflow: hidden;
 }
 
-.contact-element img {
+.contact-img-container {
+  display: flex;
+  position: relative;
   max-width: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.contact-img-container img {
   object-fit: cover;
 }
 
 #contact-image-dark {
-  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity var(--transition-delay) ease;
 }
 
 body.dark #contact-image-dark {
-  display: block;
-}
-
-body.dark #contact-image-light {
-  display: none;
+  opacity: 1;
 }
 
 .contact-form-container {
@@ -215,7 +221,7 @@ a.contact-method {
     margin-bottom: 40px;
   }
 
-  .contact-element > img {
+  .contact-img-container {
     order: 2;
     max-width: 100%;
     max-height: 33%;
