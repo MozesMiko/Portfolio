@@ -52,6 +52,7 @@
   font-family: 'Figtree', sans-serif;
   flex: 2 1 0;
   min-width: 0;
+  max-width: 350px;
   position: sticky;
   align-self: flex-start;
   order: 2;
@@ -169,6 +170,7 @@ html.dark .case-index li.active ::after {
   .case-index {
     order: 0;
     position: relative;
+    max-width: none;
     top: 0;
     align-self: stretch;
   }
@@ -178,9 +180,9 @@ html.dark .case-index li.active ::after {
   }
 
   @container (max-width: 450px) {
-  .cta-button-container {
-    justify-content: center;
+    .cta-button-container {
+      justify-content: center;
+    }
   }
-}
 
 }
