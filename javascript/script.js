@@ -184,11 +184,22 @@ if(document.querySelector('.case-page')) {
   let indexList = document.createElement('ol');
   indexList.setAttribute('id', 'index-list');
 
+  function sanitizeHeading(str) {
+    str = str.replace(/\s+/g, '-').toLowerCase();
+    return str;
+  }
+
   for(let i = 0; i < headers.length; i++) {
     let indexItem = document.createElement('li');
     let indexLink = document.createElement('a');
     let indexHeader = document.createTextNode(headers[i].textContent);
-    indexLink.setAttribute('href', '#' + sections[i].id);
+    if(sections[i].hasAttribute('id')) {
+      indexLink.setAttribute('href', '#' + sections[i].id);
+    } else {
+      sections[i].setAttribute('id', sanitizeHeading(headers[i].textContent));
+      indexLink.setAttribute('href', '#' + sections[i].id);
+    }
+    
     indexLink.appendChild(indexHeader);    
     indexItem.appendChild(indexLink);
     indexList.appendChild(indexItem);
