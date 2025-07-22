@@ -18,7 +18,7 @@
 }
 
 .case-header-img {
-  border-radius: 24px;
+  border-radius: 2% / 4.8%;
 }
 
 .content-and-index {
@@ -49,11 +49,11 @@
 }
 
 .case-index { 
+  position: relative;
   font-family: 'Figtree', sans-serif;
   flex: 2 1 0;
   min-width: 0;
   max-width: 350px;
-  min-height: 150px;
   position: sticky;
   align-self: flex-start;
   order: 2;
