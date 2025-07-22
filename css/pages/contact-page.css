@@ -164,7 +164,7 @@ textarea {
   padding: 12px 16px;
 }
 
-body.dark .contact-method {
+html.dark .contact-method {
   border: 1px solid var(--accent-color);
 }
 

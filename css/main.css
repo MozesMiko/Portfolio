@@ -163,6 +163,10 @@ h1, h2, h3, h4, h5, h6 {
   --contact-method-top-row: var(--grayscale-60);
   --contact-separator: var(--accent-color);
 
+  --case-description-bg: var(--secondary-color);
+  --case-index-inactive: var(--grayscale-40);
+  --ghost-button-text: var(--text-color);
+  --ghost-button-hover: var(--grayscale-20);
 
   --transition-delay: 0.5s
 }
@@ -210,6 +214,8 @@ h1, h2, h3, h4, h5, h6 {
   --contact-method-top-row: var(--grayscale-20);
   --contact-separator: var(--accent-color-2);
 
+  --case-description-bg: var(--accent-color);
+  --ghost-button-hover: var(--accent-color-2);
 }
 
 /* #endregion */
@@ -217,6 +223,10 @@ h1, h2, h3, h4, h5, h6 {
 body {
   background: var(--main-color);
   scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+html, body {
   scroll-behavior: smooth;
 }
 

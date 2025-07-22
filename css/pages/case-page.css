@@ -3,6 +3,18 @@
   flex-direction: column;
   gap: 40px;
   margin-bottom: 40px;
+  color: var(--text-color);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  align-self: flex-start;
+}
+
+.button > svg {
+  transform: scale(1.25);
 }
 
 .case-header-img {
@@ -17,12 +29,27 @@
 .case-description {
   flex: 3 1 0;
   padding: 24px;
-  background-color: white;
+  background-color: var(--case-description-bg);
   border-radius: 8px;
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.08);
 }
 
-.case-index {  
+.case-description h1 {
+  margin-bottom: 12px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.case-description section {
+  margin-bottom: 24px;
+}
+
+.case-description li {
+  font-family: 'Figtree', sans-serif;
+}
+
+.case-index { 
+  font-family: 'Figtree', sans-serif;
   flex: 2 1 0;
   min-width: 0;
   position: sticky;
@@ -30,9 +57,9 @@
   order: 2;
   top: 94px;
   padding: 16px;
-  background-color: white;
+  background-color: var(--case-description-bg);
   border-radius: 8px;
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.08);
 }
 
 .case-index ol {
@@ -43,8 +70,8 @@
 .case-index li {
   display: flex;
   align-items: center;
-  font-size: 18px;
-  min-width: 0; /* allow shrinking */
+  font-size: 16px;
+  min-width: 0;
 }
 
 .case-index li:not(:last-child) {
@@ -62,12 +89,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
   text-decoration: none;
-  color: gray;
+  color: var(--case-index-inactive);
   transition: color 0.4s ease;
 }
 
 .case-index li.active a {
-  color: black;
+  color: var(--text-color);
 }
 
 .case-index li ::after {
@@ -80,9 +107,24 @@
   content: url(/img/case-page/check.svg);
 }
 
+.case-index li ::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  content: url(/img/case-page/check-white.svg);
+}
+
 .case-index li.active ::after {
   opacity: 1;
   content: url(/img/case-page/check.svg);
+}
+
+html.dark .case-index li.active ::after {
+  opacity: 1;
+  content: url(/img/case-page/check-white.svg);
 }
 
 .case-description > section {
@@ -101,7 +143,7 @@
   flex: 1 1 0;
   gap: 12px;
   padding: 24px;
-  background-color: white;
+  background-color: var(--case-description-bg);
   border-radius: 16px;
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);
   container-type: inline-size;
