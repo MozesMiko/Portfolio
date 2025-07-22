@@ -172,6 +172,34 @@ if (document.querySelector('.card-container')) {
 
 //#endregion
 
+// #region - Dynamic index content
+
+if(document.querySelector('.case-page')) {
+
+  const index = document.querySelector('.case-index');
+  const description = document.querySelector('.case-description');
+  const sections = document.querySelectorAll('section');
+  const headers = description.querySelectorAll('h1');
+
+  let indexList = document.createElement('ol');
+  indexList.setAttribute('id', 'index-list');
+
+  for(let i = 0; i < headers.length; i++) {
+    let indexItem = document.createElement('li');
+    let indexLink = document.createElement('a');
+    let indexHeader = document.createTextNode(headers[i].textContent);
+    indexLink.setAttribute('href', '#' + sections[i].id);
+    indexLink.appendChild(indexHeader);    
+    indexItem.appendChild(indexLink);
+    indexList.appendChild(indexItem);
+  }
+
+  index.appendChild(indexList);
+
+}
+
+// #endregion
+
 // #region - Add .active to index list items
 
 const sections = document.querySelectorAll('section');
