@@ -1,3 +1,4 @@
+// #region - Case index
 
 // Element references
 
@@ -81,3 +82,31 @@ window.addEventListener('scroll', () => {
     });
   });
 });
+
+//#endregion
+
+// #region - Popup modal
+
+document.querySelectorAll('.case-desc-img').forEach(image => {
+  image.onclick = () => {
+  const modal = document.querySelector('.popup-modal');
+  modal.style.display = 'flex';
+  setTimeout(() => modal.classList.add('open'), 10);
+  modal.querySelector('img').src = image.getAttribute('src');
+  document.body.classList.add('no-scroll');
+};
+})
+
+document.querySelector('.popup-modal span').onclick = () => {
+  const modal = document.querySelector('.popup-modal');
+  modal.classList.remove('open');
+  document.body.classList.remove('no-scroll');
+
+  setTimeout(() => {
+    if (!modal.classList.contains('open')) {
+      modal.style.display = 'none';
+    }
+  }, 300);
+};
+
+// #endregion
