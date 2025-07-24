@@ -40,9 +40,9 @@
   background-color: var(--ghost-button-hover);
 }
 
-html.dark .button:not(.ghost) {
+/* html.dark .button:not(.ghost) {
   background-color: var(--tertiary-color);
-}
+} */
 
 html.dark .button:not(.ghost):hover {
   background-color: var(--secondary-color);
