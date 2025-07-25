@@ -2,52 +2,13 @@
 
 .hero-section {
   position: relative;
-  padding: 125px 0px 125px;
+  padding: 7.75rem 0rem 7.75rem;
   overflow-y: hidden;
   overflow-x: clip;
 }
 
 #hero-image {
   max-width: 300px;
-}
-
-#dot-grid {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  pointer-events: auto;
-}
-
-/* Light dots */
-#dot-grid::before,
-#dot-grid::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-size: 45px 45px;
-  background-repeat: repeat;
-}
-
-/* Bottom layer – light dots (always visible) */
-#dot-grid::before {
-  background-image: radial-gradient(circle at 4px 4px, var(--dot-grid-default) 3px, transparent 0);
-  z-index: 0;
-}
-
-/* Top layer – dark dots revealed under cursor */
-#dot-grid::after {
-  background-image: radial-gradient(circle at 4px 4px, var(--dot-grid-hover) 4px, transparent 0); /* darker dot color */
-  mask-image: radial-gradient(circle 100px at var(--x, -9999px) var(--y, -9999px), white 0%, transparent 80%);
-  -webkit-mask-image: radial-gradient(circle 100px at var(--x, -9999px) var(--y, -9999px), white 0%, transparent 80%);
-  mask-repeat: no-repeat;
-  -webkit-mask-repeat: no-repeat;
-  z-index: 1;
-  pointer-events: none;
-  transition: mask-image 0.2s ease, -webkit-mask-image 0.2s ease;
-}
-
-#dot-grid {
-  z-index: 0;
 }
 
 .hero-section > .content-container {
@@ -57,15 +18,15 @@
 }
 
 #hero-text h1 {
-  font-size: 40px;
-  line-height: 56px;
+  font-size: 2.5rem;
+  line-height: 1.4;
 }
 
 .hero-section .content-container {
   position: relative;
   display: flex;
   flex-direction: row;
-  gap: 100px;
+  gap: var(--space-3xl);
   align-items: center;
   justify-content: center;
 }
@@ -73,12 +34,12 @@
 #i-am-text {
   display: flex;
   flex-direction: row;
-  gap: 0.75em;
-  margin-bottom: 20px;
+  gap: 1.5ch;
+  margin-bottom: var(--space-lm);
 }
 
 #intro-text {
-  line-height: 32px;  
+  line-height: 1.8;  
 }
 
 #hero-text {
@@ -87,13 +48,13 @@
   width: 100%;
 }
 
-@container (max-width: 500px) {
+@container (max-width: 31.25rem) {
   #i-am-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0em;
-    margin-bottom: 1.5em;
+    gap: 0rem;
+    margin-bottom: var(--space-lm);
   }
 
   #hero-text > h1:first-of-type {
@@ -103,7 +64,7 @@
 }
 
 .hero-section p {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 /* #region - Typewriter */
@@ -144,7 +105,50 @@
   }
 }
 
-/* #endregion */
+/* #endregion - Typewriter */
+
+/* #region - Dot grid */
+
+#dot-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+/* Light dots */
+#dot-grid::before,
+#dot-grid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-size: 45px 45px;
+  background-repeat: repeat;
+}
+
+/* Bottom layer – light dots (always visible) */
+#dot-grid::before {
+  background-image: radial-gradient(circle at 4px 4px, var(--dot-grid-default) 3px, transparent 0);
+  z-index: 0;
+}
+
+/* Top layer – dark dots revealed under cursor */
+#dot-grid::after {
+  background-image: radial-gradient(circle at 4px 4px, var(--dot-grid-hover) 4px, transparent 0); /* darker dot color */
+  mask-image: radial-gradient(circle 100px at var(--x, -9999px) var(--y, -9999px), white 0%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle 100px at var(--x, -9999px) var(--y, -9999px), white 0%, transparent 80%);
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+  transition: mask-image 0.2s ease, -webkit-mask-image 0.2s ease;
+}
+
+#dot-grid {
+  z-index: 0;
+}
+
+/* #endregion - Dot grid */
 
 /* #region - Blobs */
 
@@ -189,43 +193,43 @@
   left: -175px;
 }
 
-/* #endregion */
+/* #endregion - Blobs */
 
 @media (max-width: 767px) {
   .hero-section .content-container {
     flex-direction: column;
-    gap: 50px;
+    gap: var(--space-2xl);
   }
 
   .hero-section {
-    padding: 105px 20px 60px;
+    padding: var(--space-3xl) var(--space-lm) var(--space-2xl);
   }
 
   #hero-text, #i-am-text {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 4px;
+    gap: var(--space-xs);
   }
 
   #hero-text p {
-    margin-top: 1em;
+    margin-top: var(--space-lm);
   }
 }
 
-/* #endregion */
+/* #endregion - Hero section */
 
-/* #region - Cases section */
+/* #region - Cases Section */
 
   .cases-section {
-    padding: 40px 0px;
+    padding: var(--space-2xl) 0rem;
   }
 
   .cases-section .content-container {
     display: flex;
     flex-direction: column;
     container-type: inline-size;
-    gap: 40px;
+    gap: var(--space-xl);
   }
 
   .header-and-button {
@@ -236,7 +240,7 @@
   }
 
 
-/* #endregion */
+/* #endregion - Cases Section */
 
 /* #region - About Me Section */
 
@@ -247,16 +251,16 @@
 .about-me-section .content-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding-top: 40px;
-  padding-bottom: 60px;
+  gap: var(--space-xl);
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-2xl);
   color: var(--text-color);
 }
 
 .about-me-section .section-content {
   display: flex;
   align-items: center;
-  gap: 100px;
+  gap: var(--space-3xl);
 }
 
 .about-me-section img {
@@ -266,7 +270,11 @@
 .text-and-cta {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+
+  font-size: 1.25rem;
+  line-height: 1.8;
+
+  gap: var(--space-xl);
 }
 
 .text-and-cta a {
@@ -275,7 +283,7 @@
   margin-left: auto;
 }
 
-/* #endregion */
+/* #endregion - About Me Section*/
 
 /* #region - Floating particles */
 
@@ -294,7 +302,7 @@
 
   .about-me-section .section-content {
     flex-direction: column;
-    gap: 40px;
+    gap: var(--space-xl);
   }
 
   .about-me-section a {
@@ -306,4 +314,4 @@
   }
 }
 
-/* #endregion */
+/* #endregion - Floating Particles*/
