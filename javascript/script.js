@@ -58,6 +58,24 @@ if (document.querySelector('.card-container')) {
   const caseContainer = document.querySelector('.card-container');
   const displayControlButtons = document.querySelectorAll('.display-control-btn');
 
+  // Find or create the ghost card element
+  let ghostCard = caseContainer.querySelector('.ghost-card');
+
+  // If ghost card doesn't exist, create it
+  if (!ghostCard) {
+    ghostCard = document.createElement('div');
+    ghostCard.classList.add('case-card', 'ghost-card');
+    ghostCard.style.visibility = 'hidden'; // hides content but occupies space
+    ghostCard.style.height = '1px'; // minimal height to force layout
+  }
+
+  // Function to add ghost card back if missing
+  function addGhostCardIfMissing() {
+    if (!caseContainer.contains(ghostCard)) {
+      caseContainer.appendChild(ghostCard);
+    }
+  }
+
   function applyView(viewClass) {
     caseContainer.classList.remove('view-default', 'view-small', 'view-row');
     caseContainer.classList.add(viewClass);
@@ -76,6 +94,15 @@ if (document.querySelector('.card-container')) {
         btn.classList.add("large");
       }
     });
+
+    // Remove ghost card from DOM if view-row, otherwise add it back
+    if (viewClass === 'view-row') {
+      if (caseContainer.contains(ghostCard)) {
+        caseContainer.removeChild(ghostCard);
+      }
+    } else {
+      addGhostCardIfMissing();
+    }
   }
 
   const savedView = localStorage.getItem('selectedView') || 'view-default';

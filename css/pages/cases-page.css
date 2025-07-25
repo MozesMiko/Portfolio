@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   color: var(--text-color);
 }
 
@@ -14,15 +15,17 @@
 .cases-page .content-container {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: var(--space-xl);
 }
 
 .card-container {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: var(--space-xl);
   container-type: inline-size;
-  margin-bottom: 2.5rem;
+
+  margin-bottom: var(--space-xl);
+
   transition: opacity 0.2s ease;
   opacity: 1;
 }
@@ -31,3 +34,4 @@
   opacity: 0;
   pointer-events: none;
 }
+

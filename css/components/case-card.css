@@ -1,3 +1,5 @@
+/* #region - Default styling */
+
 .case-card {
   display: flex;
   align-items: center;
@@ -72,6 +74,10 @@
   margin-right: 0.5em;
 }
 
+.view-default .ghost-card {
+  display: none;
+}
+
 @container (max-width: 736px) {
   .case-card {
     flex-direction: column;
@@ -91,7 +97,10 @@
     padding: 1.5rem;
     width: 100%;
   }
+
 }
+
+/* #endregion - Default styling */
 
 /* #region - Small cards*/
 
@@ -103,7 +112,7 @@
 .view-small .case-card {
   flex-direction: row;
   flex: 1 1 calc(50% - 20px);
-  max-width: calc(50% - 20px);
+  flex-grow: 1;
   min-width: 304px;
 }
 
@@ -143,9 +152,25 @@
     flex: 1 1 100%;
     max-width: 100%;
   }
+
+  .ghost-card {
+    display: none;
+  }
 }
 
-/* #endregion*/
+/* #endregion - Small cards */
+
+/* #region - Ghost card */
+
+.case-card.ghost-card {
+  visibility: hidden;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+/* #endregion - Ghost card */
 
 /* #region - Row cards*/
 
@@ -200,4 +225,4 @@
   gap: 0rem;
 }
 
-/* #endregion */
+/* #endregion - Row cards */
