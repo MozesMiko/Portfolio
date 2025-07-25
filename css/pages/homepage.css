@@ -2,9 +2,9 @@
 
 .hero-section {
   position: relative;
-  padding: 7.75rem 0rem 7.75rem;
   overflow-y: hidden;
   overflow-x: clip;
+  padding: 7.75rem 0rem var(--space-3xl);
 }
 
 #hero-image {
@@ -26,9 +26,9 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  gap: var(--space-3xl);
   align-items: center;
   justify-content: center;
+  gap: var(--space-3xl);
 }
 
 #i-am-text {
@@ -39,13 +39,13 @@
 }
 
 #intro-text {
-  line-height: 1.8;  
+  line-height: 1.8;
 }
 
 #hero-text {
+  width: 100%;
   color: var(--text-color);
   container-type: inline-size;
-  width: 100%;
 }
 
 @container (max-width: 31.25rem) {
@@ -58,8 +58,8 @@
   }
 
   #hero-text > h1:first-of-type {
-    text-align: center;
     width: 100%;
+    text-align: center;
   }
 }
 
@@ -84,15 +84,15 @@
   position: absolute;
   top: 10%;
   right: -10px;
-  content: "";
   width: 6px;
   height: 80%;
   background-color: var(--typewriter-color);
+  content: "";
   animation: blink 0.75s steps(1) infinite;
 }
 
 @keyframes blink {
-  50% {opacity: 0;}
+  50% { opacity: 0; }
 }
 
 @media (max-width: 767px) {
@@ -116,25 +116,22 @@
   pointer-events: auto;
 }
 
-/* Light dots */
 #dot-grid::before,
 #dot-grid::after {
-  content: '';
   position: absolute;
   inset: 0;
   background-size: 45px 45px;
   background-repeat: repeat;
+  content: '';
 }
 
-/* Bottom layer – light dots (always visible) */
 #dot-grid::before {
   background-image: radial-gradient(circle at 4px 4px, var(--dot-grid-default) 3px, transparent 0);
   z-index: 0;
 }
 
-/* Top layer – dark dots revealed under cursor */
 #dot-grid::after {
-  background-image: radial-gradient(circle at 4px 4px, var(--dot-grid-hover) 4px, transparent 0); /* darker dot color */
+  background-image: radial-gradient(circle at 4px 4px, var(--dot-grid-hover) 4px, transparent 0);
   mask-image: radial-gradient(circle 100px at var(--x, -9999px) var(--y, -9999px), white 0%, transparent 80%);
   -webkit-mask-image: radial-gradient(circle 100px at var(--x, -9999px) var(--y, -9999px), white 0%, transparent 80%);
   mask-repeat: no-repeat;
@@ -153,38 +150,46 @@
 /* #region - Blobs */
 
 .blob {
-  width: 500px;
-  aspect-ratio: 1/1;
-  background-color: #606f9e;
   position: absolute;
   top: -175px;
   right: -200px;
+  width: 500px;
+  aspect-ratio: 1/1;
+  background-color: #606f9e;
   z-index: -2;
   border-radius: 30% 70% 70% 30% / 30% 40% 70% 70%;
   filter: blur(75px);
-  animation: transform 12s linear infinite, 
-  rotate 12s linear infinite,
-  colorChange 6s ease-in-out infinite alternate;
+  animation: transform 12s linear infinite,
+             rotate 12s linear infinite,
+             colorChange 6s ease-in-out infinite alternate;
 }
 
 @keyframes rotate {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @keyframes transform {
-  0%, 
-  100% { border-radius: 30% 70% 70% 30% / 30% 40% 70% 70%; }
-  20% { border-radius: 40% 65% 50% 50% / 40% 35% 35% 65%; } 
-  40% { border-radius: 30% 65% 65% 35% / 65% 50% 50% 25%; } 
-  60% { border-radius: 40% 65% 50% 50% / 30% 30% 70% 75%; } 
-  80% { border-radius: 40% 60% 40% 60% / 50% 50% 50% 60%; } 
+  0%, 100% {
+    border-radius: 30% 70% 70% 30% / 30% 40% 70% 70%;
+  }
+  20% {
+    border-radius: 40% 65% 50% 50% / 40% 35% 35% 65%;
+  }
+  40% {
+    border-radius: 30% 65% 65% 35% / 65% 50% 50% 25%;
+  }
+  60% {
+    border-radius: 40% 65% 50% 50% / 30% 30% 70% 75%;
+  }
+  80% {
+    border-radius: 40% 60% 40% 60% / 50% 50% 50% 60%;
+  }
 }
 
 @keyframes colorChange {
-  0%,
-  50% {background-color: #5772C9}
-  100% {background-color: #606f9e}
+  0%, 50% { background-color: #5772C9; }
+  100% { background-color: #606f9e; }
 }
 
 .blob.two {
@@ -205,11 +210,12 @@
     padding: var(--space-3xl) var(--space-lm) var(--space-2xl);
   }
 
-  #hero-text, #i-am-text {
+  #hero-text,
+  #i-am-text {
     flex-direction: column;
     align-items: center;
-    text-align: center;
     gap: var(--space-xs);
+    text-align: center;
   }
 
   #hero-text p {
@@ -221,24 +227,23 @@
 
 /* #region - Cases Section */
 
-  .cases-section {
-    padding: var(--space-2xl) 0rem;
-  }
+.cases-section {
+  padding: var(--space-2xl) 0rem;
+}
 
-  .cases-section .content-container {
-    display: flex;
-    flex-direction: column;
-    container-type: inline-size;
-    gap: var(--space-xl);
-  }
+.cases-section .content-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  container-type: inline-size;
+}
 
-  .header-and-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--text-color);
-  }
-
+.header-and-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color);
+}
 
 /* #endregion - Cases Section */
 
@@ -270,11 +275,10 @@
 .text-and-cta {
   display: flex;
   flex-direction: column;
+  gap: var(--space-xl);
 
   font-size: 1.25rem;
   line-height: 1.8;
-
-  gap: var(--space-xl);
 }
 
 .text-and-cta a {
@@ -283,7 +287,7 @@
   margin-left: auto;
 }
 
-/* #endregion - About Me Section*/
+/* #endregion - About Me Section */
 
 /* #region - Floating particles */
 
@@ -295,8 +299,7 @@
 }
 
 @media (max-width: 767px) {
-
-  .about-me-section h1{
+  .about-me-section h1 {
     text-align: center;
   }
 
@@ -314,4 +317,4 @@
   }
 }
 
-/* #endregion - Floating Particles*/
+/* #endregion - Floating Particles */

@@ -1,15 +1,18 @@
 /* #region - <a> tags as buttons */
 
 .button {
-  font-family: 'Figtree', sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 0.5em 1em;
   border: none;
-  color: var(--button-text-color);
+  border-radius: var(--border-radius-xxs);
   background-color: var(--button-bg-color);
+
+  color: var(--button-text-color);
+  font-family: 'Figtree', sans-serif;
+  font-size: 1rem;
+  line-height: 1.25em;
   text-decoration: none;
+  text-align: center;
+    
   transition: background-color 0.5s ease;
 }
 
@@ -22,27 +25,22 @@
 }
 
 .large {
-  border-radius: 8px;
-  padding: 12px 20px;
+  padding: 0.75em 1.25em;
+  border-radius: var(--border-radius-xs);
 }
 
 .button.wide {
-  width: 150px;
-  text-align: center;
+  min-width: 150px;
 }
 
 .button.ghost {
-  color: var(--ghost-button-color);
   background-color: transparent;
+  color: var(--ghost-button-color);  
 }
 
 .button.ghost:hover {
   background-color: var(--ghost-button-hover);
 }
-
-/* html.dark .button:not(.ghost) {
-  background-color: var(--tertiary-color);
-} */
 
 html.dark .button:not(.ghost):hover {
   background-color: var(--secondary-color);
@@ -57,9 +55,11 @@ html.dark .button:not(.ghost):hover {
   justify-content: center;
   align-items: center;
   aspect-ratio: 1/1;
-  height: 40px;
-  background: var(--button-inactive-color);
+  height: 2.5rem;
+  background-color: var(--button-inactive-color);
   cursor: pointer;
+
+  font-size: 1rem;
 }
 
 .display-control-btn.active {
@@ -68,7 +68,7 @@ html.dark .button:not(.ghost):hover {
 }
 
 .display-control-btn:not(.active):hover {
-  background: var(--button-hover-color);
+  background-color: var(--button-hover-color);
 }
 
 .display-control-btn svg {
