@@ -55,7 +55,7 @@ html.dark .button:not(.ghost):hover {
   justify-content: center;
   align-items: center;
   aspect-ratio: 1/1;
-  height: var(space-xl);
+  height: var(--space-xl);
   background-color: var(--button-inactive-color);
   cursor: pointer;
 
