@@ -297,10 +297,6 @@ button {
 
 @media (max-width: 1120px) {
   
-  /* .navbar-content {
-    margin: 0 20px;
-  } */
-
   .navbar-content,
   .hero-section .content-container,
   .about-me-section .content-container,
@@ -311,4 +307,5 @@ button {
   .case-page .content-container {
     margin: 0 20px;
   }
+  
 }
