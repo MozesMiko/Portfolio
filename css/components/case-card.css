@@ -12,11 +12,10 @@
 }
 
 .case-thumbnail {
-  padding: 1.5rem;
+  padding: var(--space-l);
   align-self: stretch;
-  width: 400px;
+  max-width: 40%;
   flex-shrink: 0;
-  /* max-height: 300px; */
   max-width: 100%;
   opacity: 1;
   transition: all 0.01s ease;
@@ -24,7 +23,7 @@
 }
 
 .case-thumbnail img {
-  border-radius: calc(8px + 0.5rem);
+  border-radius: var(--border-radius-m);
   max-height: 100%;
   object-fit: cover;
   transition: all 0.01s ease;
@@ -34,7 +33,7 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding: 2rem 2rem 2rem 1rem;
+  padding: var(--space-ml) var(--space-ml) var(--space-ml) var(--space-m);
 }
 
 .case-information {
@@ -61,7 +60,6 @@
 
 .case-card-text,
 .tag-container {
-  /* max-height: 120px; */
   max-width: 100%;
   opacity: 1;
   transition: all 0.01s ease;
@@ -88,13 +86,12 @@
   }
 
   .case-thumbnail img {
-    /* height: 272px; */
     object-fit: cover;
     width: 100%;
   }
 
   .case-content {
-    padding: 1.5rem;
+    padding: var(--space-l);
     width: 100%;
   }
 
@@ -139,7 +136,7 @@
 }
 
 .view-small .case-content {
-  padding: 1.5rem;
+  padding: var(--space-l);
   flex: 1;
 }
 
@@ -177,14 +174,14 @@
 .card-container.view-row {
   flex-direction: column;
   gap: 0rem;
-  border-radius: 12px;
+  border-radius: var(--border-radius-s);
   overflow: hidden;
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.25);
 }
 
 .view-row .case-card:not(:first-child):not(:last-child) {
-  border-top: 1px solid #CCC;
-  border-bottom: 1px solid #CCC;
+  border-top: 1px solid var(--grayscale-20);
+  border-bottom: 1px solid var(--grayscale-20);
 }
 
 .view-row .case-card {

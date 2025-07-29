@@ -2,18 +2,65 @@
   background-color: var(--nav-footer);
   backdrop-filter: blur(10px);
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 1;
 }
 
-.navbar-content {
+footer {
+  background-color: var(--nav-footer);
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+  font-family: 'Figtree', sans-serif;
+}
+
+.logo-and-name {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.footer-links {
+  /* display: flex; */
+  display: none;
+  align-items: center;
+  gap: var(--space-ml);
+  align-self: stretch;
+}
+
+.logo-and-name svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.icon-dark {
+  display: none;
+}
+
+.dark .icon-light {
+  display: none;
+}
+
+.dark .icon-dark {
+  display: block;
+}
+
+.icon-dark, 
+.icon-light {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.navbar-content,
+.footer-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   max-width: 1080px;
   margin: 0 auto;
-  padding: 12px 0px;
+  padding: var(--space-sm) 0px;
 }
 
 .logo svg{
@@ -26,7 +73,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 2rem;
+  gap: var(--space-ml);
   list-style-type: none;
 }
 
@@ -38,7 +85,7 @@
 
 .theme-and-burger {
   display: flex;
-  gap: 8px;
+  gap: var(--space-s);
 }
 
 .theme-control {
@@ -118,17 +165,19 @@
     top: 100%;
     left: 0;
     right: 0;
+    max-height: calc(100dvh - 4.5rem);
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--mobile-nav-bg);
-    padding: 10px 0;
+    padding: var(--space-sm) 0;
     visibility: hidden;
     opacity: 0;
     box-shadow: 0 4px 6px -6px var(--grayscale-60);
     transform: translateY(-10px);
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+    overflow-y: auto;
   }
 
   .nav-links.open {
@@ -142,12 +191,12 @@
   .nav-links ul {
     flex-direction: column;
     align-items: stretch;
-    gap: 0.5rem;
+    gap: var(--space-s);
   }
 
   .nav-links ul li {
     text-align: center;
-    padding: 8px;
+    padding: var(--space-s);
   }
 
   .navbar-content > :nth-child(2) {

@@ -5,8 +5,8 @@
 /* #region - About me - Hero section */
 
 .about-me-hero { 
-  padding-top: 8.375rem; 
-  padding-bottom: 5rem;
+  padding-top: var(--space-4xl); 
+  padding-bottom: var(--space-3xl);
   color: var(--text-color);
 }
 
@@ -14,7 +14,7 @@
 .personal-text .content-container {
   display: flex;
   flex-direction: row;
-  gap: 6.25rem;
+  gap: var(--space-3xl);
   align-items: center;
 }
 
@@ -43,7 +43,7 @@
 /* #region - About me - Skills section */
 
 .skills-section {
-  padding: 3.75rem 0rem;
+  padding: var(--space-2mxl) 0rem;
   position: relative;
   overflow: hidden;
 }
@@ -74,7 +74,7 @@
   z-index: 0;
   display: flex;
   flex-direction: column;
-  gap: calc(32px + 0.5rem);
+  gap: var(--space-xl);
 }
 
 .skills-section .section-header,
@@ -83,7 +83,7 @@
 .education-section .section-header {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: var(--space-xl);
   color: var(--text-color);
 }
 
@@ -106,7 +106,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: calc(32px + 0.5rem);
+  gap: var(--space-xl);
 }
 
 .skill-container {
@@ -115,7 +115,7 @@
   box-sizing: border-box;
   flex: 1 1 300px;
   flex-direction: column;
-  padding: calc(16px + 0.5rem);
+  padding: var(--space-l);
   border-radius: var(--border-radius-l);
   background-color: var(--skill-container-background);
   max-width: 350px;
@@ -130,7 +130,7 @@
 }
 
 .skill-container li {
-  padding-top: calc(4px + 0.25rem);
+  padding-top: var(--space-s);
 }
 
 .skill-container h2::after {
@@ -139,7 +139,7 @@
   width: 75%;
   height: 1px;
   margin: 0.3em auto;
-  background: #001021;
+  background: var(--skill-conatiner-after);
 }
 
 .skill-container ul {
@@ -155,29 +155,26 @@
 /* #region - About me section */
 
 .personal-section {
-  padding: 3.75rem 0rem;
+  padding: var(--space-2mxl) 0rem;
   color: var(--text-color);
+  line-height: 1.8;
 }
 
 .personal-section .content-container {
   display: flex;
   flex-direction: column;
-  gap: calc(32px + 0.5rem);
+  gap: var(--space-xl);
 }
 
 .personal-content {
   display: flex;
   align-items: center;
-  gap: 8.375rem;
+  gap: var(--space-4xl);
 } 
 
 #about-me-working {
   max-width: 315px;
   border-radius: var(--border-radius-xl);
-}
-
-.personal-text {
-  line-height: 1.75em;
 }
 
 .personal-text p:nth-child(2){
@@ -190,24 +187,24 @@
 
 .experience-section,
 .education-section {
-  padding: 2.5rem 0rem 3.75rem 0rem;
+  padding: var(--space-xl) 0rem var(--space-2mxl) 0rem;
 }
 
 .experience-section .content-container,
 .education-section .content-container {
   display: flex;
   flex-direction: column;
-  gap: calc(32px + 0.5rem);
+  gap: var(--space-xl);
 }
 
 .experience,
 .education {
   display: flex;
   align-items: flex-start;
-  gap: calc(16px + 0.5rem);
+  gap: var(--space-l);
   background-color: var(--experience-background);
   color: var(--text-color);
-  padding: calc(16px + 0.5rem);
+  padding: var(--space-l);
   border-radius: var(--border-radius-s);
   box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.15);
 }
@@ -224,14 +221,14 @@
   flex-basis: 100%;
   margin: auto;
   align-items: stretch;
-  gap: calc(32px + 0.5rem);
+  gap: var(--space-xl);
 }
 
 .experience-content,
 .education-content {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap:var(--space-s);
 }
 
 .experience-text,
@@ -256,7 +253,7 @@
   .about-me-hero .content-container,
   .personal-content {
     flex-direction: column;
-    gap: 3.125rem;
+    gap: var(--space-2xl);
     text-align: center;
   }
 

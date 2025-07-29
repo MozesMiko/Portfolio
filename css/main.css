@@ -133,10 +133,9 @@ h1, h2, h3, h4, h5, h6 {
   --space-ml: 2rem;
   --space-xl: 2.5rem;
   --space-2xl: 3rem;
+  --space-2mxl: 3.75rem;
   --space-3xl: 6.25rem;
   --space-4xl: 8.375rem;
-
-  /* Spacing values - component specific */
 
 
   /* Color tokens */
@@ -180,6 +179,7 @@ h1, h2, h3, h4, h5, h6 {
 
   --skill-svg-color: var(--grayscale-40);
   --skill-container-background: #E6E6E699;
+  --skill-conatiner-after: #001021;
   --experience-background: var(--main-color);
   --education-background: var(--secondary-color);
 
