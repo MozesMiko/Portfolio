@@ -1,9 +1,7 @@
-.contact-page {
+.contact-page .content-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  margin: 0;
 }
 
 /* #region - Contact element */
@@ -88,7 +86,7 @@ input,
 textarea {
   margin-top: var(--space-xs);
   padding: var(--space-xs) var(--space-s);
-  border-radius: var(--border-radius-xs);
+  border-radius: var(--border-radius-xxs);
   font-family: 'Figtree', sans-serif;
   color: var(--text-color);
   border: 1px solid var(--input-border-color);
