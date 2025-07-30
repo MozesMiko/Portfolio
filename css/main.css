@@ -167,6 +167,7 @@ h1, h2, h3, h4, h5, h6 {
   --dot-grid-default: #D9D9D9B3;
   --dot-grid-hover: #B3B3B3;
 
+  --theme-control-hover: var(--grayscale-20);
   --mobile-nav-bg: var(--secondary-color);
 
   --button-text-color: var(--text-white);
@@ -221,6 +222,7 @@ h1, h2, h3, h4, h5, h6 {
   --dot-grid-default: #D9D9D91A;
   --dot-grid-hover: #E6E6E666;
 
+  --theme-control-hover: var(--grayscale-80);
   --mobile-nav-bg: black;
 
   --button-text-color: var(--text-color);
