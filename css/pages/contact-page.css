@@ -4,6 +4,12 @@
   align-items: center;
 }
 
+body.contact-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 /* #region - Contact element */
 
 .contact-page .content-container {
