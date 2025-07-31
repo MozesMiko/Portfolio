@@ -150,7 +150,7 @@ footer {
 
 .footer-links {
   /* display: flex; */
-  display: none;
+  display: flex;
   align-items: center;
   gap: var(--space-ml);
   align-self: stretch;

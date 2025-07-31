@@ -15,15 +15,8 @@
   <?php include '../../components/navigation.php'; ?>
   <div class="content-container top-padding">
     <a href="/cases/index.html" class="button">
-      <svg width="11" height="11" viewBox="0 0 11 11" fill="none" 
-      xmlns="http://www.w3.org/2000/svg">
-        <path d="M10.7266 5.5C10.7266 5.82812 10.4688 6.08594 10.1641 
-        6.08594H2.19531L5.3125 9.03906C5.54688 9.25 5.54688 9.625 5.33594 
-        9.83594C5.125 10.0703 4.77344 10.0703 4.53906 9.85938L0.414062 5.92188C0.296875 
-        5.80469 0.25 5.66406 0.25 5.5C0.25 5.35938 0.296875 5.21875 0.414062 
-        5.10156L4.53906 1.16406C4.77344 0.953125 5.125 0.953125 5.33594 1.1875C5.54688 
-        1.39844 5.54688 1.77344 5.3125 1.98438L2.19531 4.9375H10.1641C10.4922 4.9375 
-        10.7266 5.19531 10.7266 5.5Z" fill="currentColor"/>
+      <svg>
+        <use href="/img/shared_assets/icons.svg#left-arrow-icon"></use>
       </svg>
       Back to cases
     </a>

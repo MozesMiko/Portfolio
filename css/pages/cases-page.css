@@ -12,9 +12,17 @@
   overflow: hidden;
 }
 
+.display-control-btn svg {
+  height: 1em;
+  width: 1em;
+}
+
 .cases-page .content-container {
   display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
+  justify-content: flex-start;
+  min-height: calc(100vh - 3rem);
   gap: var(--space-xl);
 }
 
