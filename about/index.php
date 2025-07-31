@@ -158,7 +158,10 @@
       </div>
       <div class="experience-container">
         <div class="experience" id="merkle">
-          <img class="experience-logo" src="/img/shared_assets/moon.svg" alt="">
+          <div class="company-logo-container">
+            <img class="company-light" src="/img/about_me/merkle-light.svg" alt="">
+            <img class="company-dark" src="/img/about_me/merkle-dark.svg" alt="">
+          </div>
           <div class="experience-content">
             <div class="experience-header">
               <p class="position">Experience Architect</p>
@@ -177,8 +180,11 @@
             </div>
           </div>
         </div>
-        <div class="experience" id="empact">
-          <img class="experience-logo" src="/img/shared_assets/moon.svg" alt="">
+        <div class="experience" id="pppraksis">
+          <div class="company-logo-container">
+            <img class="company-light" src="/img/about_me/pppraksis-light.svg" alt="">
+            <img class="company-dark" src="/img/about_me/pppraksis-dark.svg" alt="">
+          </div>
           <div class="experience-content">
             <div class="experience-header">
               <p class="position">IT Supporter</p>
@@ -197,7 +203,10 @@
           </div>
         </div>
         <div class="experience" id="empact">
-          <img class="experience-logo" src="/img/shared_assets/moon.svg" alt="">
+          <div class="company-logo-container">
+            <img class="company-light" src="/img/about_me/empact-light.svg" alt="">
+            <img class="company-dark" src="/img/about_me/empact-dark.svg" alt="">
+          </div>
           <div class="experience-content">
             <div class="experience-header">
               <p class="position">UX/UI Designer</p>
@@ -221,7 +230,10 @@
           </div>
         </div>
         <div class="experience" id="digitalguest">
-          <img src="/img/shared_assets/mozeslogo.svg" alt="">
+          <div class="company-logo-container">
+            <img class="company-light" src="/img/about_me/digitalguest-light.svg" alt="">
+            <img class="company-dark" src="/img/about_me/digitalguest-dark.svg" alt="">
+          </div>
           <div class="experience-content">
             <div class="experience-header">
               <p class="position">UX/UI Designer</p>
@@ -244,7 +256,9 @@
           </div>
         </div>
         <div class="experience" id="minforening">
-          <img src="/img/shared_assets/mozeslogo.svg" alt="">
+          <div class="company-logo-container">
+            <img src="/img/about_me/minforening.svg" alt="">
+          </div>
           <div class="experience-content">
             <div class="experience-header">
               <p class="position">UX/UI Designer & Researcher</p>
@@ -269,7 +283,10 @@
           </div>
         </div>
         <div class="experience" id="easyr">
-          <img src="/img/shared_assets/mozeslogo.svg" alt="">
+          <div class="company-logo-container">
+            <img class="company-light" src="/img/about_me/easyr-light.svg" alt="">
+            <img class="company-dark" src="/img/about_me/easyr-dark.svg" alt="">
+          </div>
           <div class="experience-content">
             <div class="experience-header">
               <p class="position">UX/UI Designer & Researcher</p>
@@ -304,7 +321,10 @@
       </div>
       <div class="education-container">
         <div class="education" id="aau-msc">
-          <img src="/img/shared_assets/moon.svg" alt="">
+          <div class="university-logo-container">
+            <img class="university-light" src="/img/about_me/aau-light.svg" alt="">
+            <img class="university-dark" src="/img/about_me/aau-dark.svg" alt="">
+          </div>
           <div class="education-content">
             <div class="education-header">
               <p class="university">Aalborg University</p>
@@ -324,7 +344,10 @@
           </div>
         </div>
         <div class="education" id="aau-bsc">
-          <img src="/img/shared_assets/moon.svg" alt="">
+          <div class="university-logo-container">
+            <img class="university-light" src="/img/about_me/aau-light.svg" alt="">
+            <img class="university-dark" src="/img/about_me/aau-dark.svg" alt="">
+          </div>
           <div class="education-content">
             <div class="education-header">
               <p class="university">Aalborg University</p>
@@ -343,7 +366,10 @@
           </div>
         </div>
         <div class="education" id="elte">
-          <img src="/img/shared_assets/moon.svg" alt="">
+          <div class="university-logo-container">
+            <img class="university-light" src="/img/about_me/elte-light.svg" alt="">
+            <img class="university-dark" src="/img/about_me/elte-dark.svg" alt="">
+          </div>
           <div class="education-content">
             <div class="education-header">
               <p class="university">Eötvös Loránd Science University</p>

@@ -224,6 +224,35 @@
   gap: var(--space-xl);
 }
 
+.company-logo-container,
+.university-logo-container {
+  height: 30px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--company-logo-background);
+  border-radius: var(--border-radius-xxs);
+  border: 1px solid var(--grayscale-20);
+}
+
+.dark .company-logo-container,
+.dark .university-logo-container {
+  border: none;
+}
+
+.company-dark,
+.university-dark {
+  display: none;
+}
+
+.dark .company-dark,
+.dark .university-dark {
+  display: block;
+}
+
+.dark .company-light,
+.dark .university-light {
+  display: none;
+}
+
 .experience-content,
 .education-content {
   display: flex;

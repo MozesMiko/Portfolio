@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #213062;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #ef3d23;
+      }
+    </style>
+  </defs>
+  <g id="Merkle">
+    <polygon id="Triangle" class="cls-2" points="10.07 21.97 10.07 14.25 2.52 14.25 10.07 21.97"/>
+    <polygon id="M" class="cls-1" points="27.48 8.03 27.48 21.97 24.48 21.97 24.48 13.82 22.33 15.98 20.21 18.1 15.9 13.79 15.9 21.97 12.9 21.97 12.9 8.03 14.38 8.03 20.21 13.86 24.48 9.58 26.03 8.03 27.48 8.03"/>
+  </g>
+</svg>

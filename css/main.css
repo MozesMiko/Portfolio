@@ -183,6 +183,7 @@ h1, h2, h3, h4, h5, h6 {
   --skill-conatiner-after: #001021;
   --experience-background: var(--main-color);
   --education-background: var(--secondary-color);
+  --company-logo-background: var(--secondary-color);
 
   --contact-element-bg: var(--tertiary-color);
   --contact-element-shadow: #02041D26;
@@ -236,6 +237,7 @@ h1, h2, h3, h4, h5, h6 {
   --skill-container-background: #FFFFFF80;
   --experience-background: var(--accent-color);
   --education-background: var(--accent-color);
+  --company-logo-background: var(--tertiary-color);
 
   --contact-element-bg: var(--secondary-color);
   --contact-element-shadow: #1E4EBD;
