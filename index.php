@@ -13,7 +13,8 @@
   <title>Mozes Miko</title>
 </head>
 <body class="no-animate">
-  <?php include 'components/navigation.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/navigation.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/img/shared_assets/icons.svg'; ?>
   <div class="hero-section">
     <div id="dot-grid"></div>
     <div class="content-container">
@@ -31,8 +32,6 @@
           craft, I continuously develop myself in various areas to ensure seamless 
           cross-functional collaboration.
         </p>
-        <!-- <a href="contact/index.html"><button>Contact me</button></a>
-        <a href="contact/index.html"><button>Download CV</button></a> -->
       </div>
       <img id="hero-image" src="/img/homepage/hero_image.webp" alt="">
       <div class="blob one"></div>
@@ -43,7 +42,7 @@
     <div class="content-container">
       <div class="header-and-button">
         <h1>Cases</h1>
-        <a href="/cases/index.html" class="button large wide">See more</a>
+        <a href="/cases/" class="button large wide">See more</a>
       </div>
       <div class="case-card">
         <div class="case-thumbnail">
@@ -62,7 +61,7 @@
               <p>Penis</p>
               <p>Penis</p>
             </div>
-            <a href="/cases/project_template/index.html" class="button large">Read more</a>
+            <a href="/cases/project_template/" class="button large">Read more</a>
           </div>
         </div>
       </div>
@@ -83,7 +82,7 @@
               <p>Penis</p>
               <p>Penis</p>
             </div>
-            <a href="#" class="button large">Read more</a>
+            <a href="/cases/project_template/" class="button large">Read more</a>
           </div>
         </div>
       </div>
@@ -106,12 +105,12 @@
               explore more about me and discover how I can help your business achieve its
               goals.
           </p>
-          <a href="about/index.html" class="button large wide">Read more</a>
+          <a href="/about/" class="button large wide">Read more</a>
         </div>
       </div>
     </div>
   </div>
-  <?php include 'components/footer.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/footer.php'; ?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="/javascript/script.js"></script>
   <script src="/javascript/particles.js"></script>

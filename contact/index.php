@@ -12,7 +12,8 @@
   <title>Contact me</title>
 </head>
 <body class="contact-page">
-  <?php include '../components/navigation.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/navigation.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/img/shared_assets/icons.svg'; ?>
   <div class="content-container">
     <div class="contact-element">
       <div class="contact-img-container">
@@ -56,7 +57,7 @@
             </div>
             <div class="contact-method-icon-container">
               <svg>
-                <use href="img/shared_assets/icons.svg#email-icon"></use>
+                <use href="#email-icon"></use>
               </svg>
             </div>
           </div>
@@ -69,7 +70,7 @@
             </div>
             <div class="contact-method-icon-container">
               <svg>
-                <use href="img/shared_assets/icons.svg#phone-icon"></use>
+                <use href="#phone-icon"></use>
               </svg>
             </div>
           </div>
@@ -82,7 +83,7 @@
             </div>
             <div class="contact-method-icon-container">
               <svg>
-                <use href="img/shared_assets/icons.svg#linkedin-icon"></use>
+                <use href="#linkedin-icon"></use>
               </svg>
             </div>
           </a>
@@ -94,7 +95,7 @@
             </div>
             <div class="contact-method-icon-container">
               <svg>
-                <use href="img/shared_assets/icons.svg#github-icon"></use>
+                <use href="#github-icon"></use>
               </svg>
             </div>
           </a>
@@ -102,7 +103,7 @@
       </div>
     </div>
   </div>
-  <?php include '../components/footer.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/footer.php'; ?>
   <script src="/javascript/script.js"></script>
   <script src="/javascript/contactpage.js"></script>
 </body>

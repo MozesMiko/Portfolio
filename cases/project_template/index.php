@@ -12,11 +12,12 @@
   <title>Project template</title>
 </head>
 <body class="case-page">
-  <?php include '../../components/navigation.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/navigation.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/img/shared_assets/icons.svg'; ?>
   <div class="content-container top-padding">
     <a href="/cases/index.html" class="button">
       <svg>
-        <use href="/img/shared_assets/icons.svg#left-arrow-icon"></use>
+        <use href="#left-arrow-icon"></use>
       </svg>
       Back to cases
     </a>
@@ -200,7 +201,6 @@
              and user interactions.
           </p>
           <img class="case-desc-img" src="/img/case-page/gameboy.webp" alt="">
-          <!-- <img class="case-image" src="newpostsettings.png" alt=""> -->
         </section>
       </div>
     </div>
@@ -215,7 +215,7 @@
               thoughtful, user-centered solutions to your team, I’d love to hear from you.
             </p>
             <div class="cta-button-container">
-              <a href="/contact/index.html" class="button">Get in touch</a>
+              <a href="/contact/" class="button">Get in touch</a>
             </div>
           </div>
           <div class="cta">
@@ -225,13 +225,13 @@
               page to get a better sense of who I am and how I work.
             </p>
             <div class="cta-button-container">
-              <a href="/cases/index.html" class="button ghost">See more cases</a>
-              <a href="/about/index.html" class="button">Get to know me</a>
+              <a href="/cases/" class="button ghost">See more cases</a>
+              <a href="/about/" class="button">Get to know me</a>
             </div>
           </div>
         </div>
   </div>
-  <?php include '../../components/footer.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/footer.php'; ?>
   <script src="/javascript/script.js"></script>
   <script src="/javascript/casepage.js"></script>
 </body>

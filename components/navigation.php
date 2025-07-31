@@ -3,7 +3,7 @@
     <div class="logo">
       <a href="index.html">
         <svg>
-          <use href="img/shared_assets/icons.svg#personal-logo"></use>
+          <use href="#personal-logo"></use>
         </svg>
       </a>
     </div>
@@ -18,10 +18,10 @@
     <div class="theme-and-burger">
       <div class="theme-control">
         <svg id="moon">
-          <use href="img/shared_assets/icons.svg#moon-icon"></use>
+          <use href="#moon-icon"></use>
         </svg>
         <svg id="sun">
-          <use href="img/shared_assets/icons.svg#sun-icon"></use>
+          <use href="#sun-icon"></use>
         </svg>
       </div>
       <div class="burger-menu">

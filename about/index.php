@@ -11,7 +11,8 @@
   <title>About me</title>
 </head>
 <body class="about-me-page">
-  <?php include '../components/navigation.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/navigation.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/img/shared_assets/icons.svg'; ?>
   <div class="about-me-hero">
     <div class="content-container">
       <img id="about-me-hero-img" src="/img/about_me/about_me_hero.webp" alt="">
@@ -27,7 +28,8 @@
   </div>
   <div class="skills-section">
     <div class="svg-wrapper">
-      <svg id="svg-bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 100%">
+      <svg id="svg-bg" xmlns="http://www.w3.org/2000/svg" 
+      xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 100%">
         <defs>
           <style>
             .cls-1 {
@@ -391,7 +393,7 @@
       </div>
     </div>
   </div>
-  <?php include '../components/footer.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/footer.php'; ?>
   <script src="/javascript/script.js"></script>
 </body>
 </html>

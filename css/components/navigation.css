@@ -149,7 +149,6 @@ footer {
 }
 
 .footer-links {
-  /* display: flex; */
   display: flex;
   align-items: center;
   gap: var(--space-ml);

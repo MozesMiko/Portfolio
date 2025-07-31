@@ -13,24 +13,25 @@
   <title>Cases</title>
 </head>
 <body class="cases-page no-animate">
-  <?php include '../components/navigation.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/navigation.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/img/shared_assets/icons.svg'; ?>
   <div class="content-container top-padding">
     <div class="header-and-display-control">
       <h1>Cases</h1>
       <div class="display-control">
         <button class="display-control-btn" id="view-default">
           <svg>
-            <use href="img/shared_assets/icons.svg#card-default-icon"></use>
+            <use href="#card-default-icon"></use>
           </svg>
         </button>
         <button class="display-control-btn" id="view-small">
           <svg>
-            <use href="img/shared_assets/icons.svg#card-small-icon"></use>
+            <use href="#card-small-icon"></use>
           </svg>
         </button>
         <button class="display-control-btn" id="view-row">
           <svg>
-            <use href="img/shared_assets/icons.svg#card-row-icon"></use>
+            <use href="#card-row-icon"></use>
           </svg>
         </button>
       </div>
@@ -53,7 +54,7 @@
               <p>Penis</p>
               <p>Penis</p>
             </div>
-            <a href="#" class="button large">Read more</a>
+            <a href="/cases/project_template/" class="button large">Read more</a>
           </div>
         </div>
       </div>
@@ -74,7 +75,7 @@
               <p>Penis</p>
               <p>Penis</p>
             </div>
-            <a href="#" class="button large">Read more</a>
+            <a href="/cases/project_template/" class="button large">Read more</a>
           </div>
         </div>
       </div>
@@ -95,7 +96,7 @@
               <p>Penis</p>
               <p>Penis</p>
             </div>
-            <a href="#" class="button large">Read more</a>
+            <a href="/cases/project_template/" class="button large">Read more</a>
           </div>
         </div>
       </div>
@@ -103,7 +104,7 @@
       </div>
     </div>
   </div>
-  <?php include '../components/footer.php'; ?>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/footer.php'; ?>
   <script src="/javascript/script.js"></script>
 </body>
 </html>
