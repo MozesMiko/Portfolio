@@ -57,6 +57,10 @@ html.dark #contact-image-dark {
   flex: 1;
 }
 
+.form-and-success-container {
+  position: relative
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -157,6 +161,43 @@ textarea {
 }
 
 /* #endregion - Contact element */
+
+/* #region - Success message */
+
+#success-message {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 0s linear 1s;
+
+  font-family: 'Poppins', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-ml);
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--contact-element-bg);
+  color:var(--text-color);
+  justify-content:center; 
+  align-items:center; 
+  font-size:1.5rem;
+}
+
+#success-message.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease;
+}
+
+#success-message svg {
+  scale: 80%;
+  color: #17bd1c;
+}
+
+/* #endregion - Success message */
 
 /* #region - Contact method buttons */
 

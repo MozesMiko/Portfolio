@@ -28,24 +28,34 @@
             <p class="banner-bottom-row">Let's get in touch today!</p>
           </div>
         </div>
-        <form action="">
-          <div class="form-name-and-email">
-            <div class="form-name-container">
-              <label for="name">Your name</label>
-              <input type="text" placeholder="Name Surname" name="name" id="name">
+        <div class="form-and-success-container">
+          <div id="success-message">
+            <svg>
+              <use href="#circle-check-icon"></use>
+            </svg>
+            <p>Thank you, your message was sent!</p>
+          </div>
+          <form action="send-email.php" method="POST" id="contact-form">
+            <div class="form-name-and-email">
+              <div class="form-name-container">
+                <label for="name">Your name</label>
+                <input type="text" placeholder="Name Surname" name="name" id="name">
+              </div>
+              <div class="form-email-container">
+                <label for="email">Email</label>
+                <input type="email" placeholder="name@email.com" name="email" id="email">
+              </div>            
             </div>
-            <div class="form-email-container">
-              <label for="email">Email</label>
-              <input type="email" placeholder="name@email.com" name="email" id="email">
-            </div>            
-          </div>
-          <div class="form-message">
-            <label for="message">Message</label>
-            <textarea placeholder="Type your message here" name="message" id="message"
-            rows="3"></textarea>
-          </div>
-          <input class="button" type="submit" value="Send message" id="form-submit-btn">
-        </form>
+            <div class="form-message">
+              <label for="message">Message</label>
+              <textarea placeholder="Type your message here" name="message" id="message"
+              rows="3"></textarea>
+            </div>
+            <input type="text" name="website" style="display:none">
+            <input class="button" type="submit" name="submit" value="Send message"
+            id="form-submit-btn">
+          </form>
+        </div>
         <div class="separator"><p>or</p></div>
         <div class="contact-method-container">
           <div class="contact-method" id="emailContact">
