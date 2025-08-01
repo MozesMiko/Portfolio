@@ -28,53 +28,51 @@
   </div>
   <div class="skills-section">
     <div class="svg-wrapper">
-      <svg id="svg-bg">
-        <use href="#svg-bg-icon"></use>
-      </svg>
-      <div class="content-container">
-        <div class="section-header">
-          <h1>What I bring to your team</h1>
+      <img src="/img/about_me/skill-pattern.svg" alt="" class="svg-background">
+    </div>
+    <div class="content-container">
+      <div class="section-header">
+        <h1>What I bring to your team</h1>
+      </div>
+      <div class="skill-container-wapper">
+        <div class="skill-container">
+          <h2>Core skills</h2>
+          <ul>
+            <li>User-centered design</li>
+            <li>Design thinking</li>
+            <li>Usability testing & iteration</li>
+            <li>User research & testing</li>
+            <li>Responsive & accessible design</li>
+            <li>Interaction design</li>
+            <li>Design systems & component libraries</li>
+          </ul>
         </div>
-        <div class="skill-container-wapper">
-          <div class="skill-container">
-            <h2>Core skills</h2>
-            <ul>
-              <li>User-centered design</li>
-              <li>Design thinking</li>
-              <li>Usability testing & iteration</li>
-              <li>User research & testing</li>
-              <li>Responsive & accessible design</li>
-              <li>Interaction design</li>
-              <li>Design systems & component libraries</li>
-            </ul>
-          </div>
-          <div class="skill-container">
-            <h2>Soft skills</h2>
-            <ul>
-              <li>Cross-functional collaboration</li>
-              <li>Excllent communication</li>
-              <li>Adaptability</li>
-              <li>Critical thinking</li>
-              <li>Problem solving</li>
-              <li>Attention to detail</li>
-              <li>Time management</li>
-            </ul>
-          </div>
-          <div class="skill-container">
-            <h2>Related skills</h2>
-            <ul>
-              <li>Figma</li>
-              <li>HTML, CSS, JavaScript</li>
-              <li>Version control (Git)</li>
-              <li>Agile methodology</li>
-              <li>JIRA, Confluence</li>
-              <li>Adobe Creative Suite</li>
-              <li>Product Strategy</li>
-            </ul>
-          </div>
+        <div class="skill-container">
+          <h2>Soft skills</h2>
+          <ul>
+            <li>Cross-functional collaboration</li>
+            <li>Excllent communication</li>
+            <li>Adaptability</li>
+            <li>Critical thinking</li>
+            <li>Problem solving</li>
+            <li>Attention to detail</li>
+            <li>Time management</li>
+          </ul>
+        </div>
+        <div class="skill-container">
+          <h2>Related skills</h2>
+          <ul>
+            <li>Figma</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Version control (Git)</li>
+            <li>Agile methodology</li>
+            <li>JIRA, Confluence</li>
+            <li>Adobe Creative Suite</li>
+            <li>Product Strategy</li>
+          </ul>
         </div>
       </div>
-    </div> 
+    </div>    
   </div>    
   <div class="personal-section">
     <div class="content-container">
