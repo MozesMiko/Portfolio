@@ -51,6 +51,12 @@ window.addEventListener("resize", () => {
 
 //#endregion
 
+//#region - Highlight current page
+
+
+
+//#endregion
+
 //#region - Case card display
 
 if (document.querySelector('.card-container')) {

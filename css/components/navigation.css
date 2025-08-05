@@ -149,7 +149,7 @@ footer {
 }
 
 .footer-links {
-  display: flex;
+  display: none;
   align-items: center;
   gap: var(--space-ml);
   align-self: stretch;

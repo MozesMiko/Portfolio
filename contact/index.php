@@ -51,7 +51,6 @@
               <textarea placeholder="Type your message here" name="message" id="message"
               rows="3"></textarea>
             </div>
-            <input type="text" name="website" style="display:none">
             <input class="button" type="submit" name="submit" value="Send message"
             id="form-submit-btn">
           </form>

@@ -13,26 +13,14 @@
           exit;
       }
 
-      if (!empty($_POST['website'])) {
-        exit("Spam detected");
-      }
-
-      session_start();
-
-      if (isset($_SESSION['last_submit']) && time() - $_SESSION['last_submit'] < 30) {
-          exit("Please wait before sending again.");
-      }
-
-      $_SESSION['last_submit'] = time();
-
       $to = "mozesmiko@gmail.com";
-      $subject = "New Contact Form Message from $name";
+      $subject = "New Contact Form Message from your website";
       
       $email_content = "Name: $name\n";
       $email_content .= "Email: $email\n\n";
       $email_content .= "Message:\n$message\n";
 
-      $headers = "From: no-reply@mozesmiko.dk\r\n";
+      $headers = "From: noreply@mozesmiko.dk\r\n";
       $headers .= "Reply-To: $email\r\n";
 
       if (mail($to, $subject, $email_content, $headers)) {

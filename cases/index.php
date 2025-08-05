@@ -37,64 +37,139 @@
       </div>
     </div>
     <div class="card-container">
-      <div class="case-card">
+      <div class="case-card" id="knowledge-base">
         <div class="case-thumbnail">
           <img src="/img/shared_assets/case-placeholder.webp" alt="">
         </div>
         <div class="case-content">
           <div class="case-information">
-            <h1 class="case-card-title">Big ol' penis</h1>
-            <p class="case-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra 
-            mauris at turpis sodales, sed placerat felis tincidunt. Integer ac dui 
-            viverra, blandit diam in, commodo ante.</p>
+            <h1 class="case-card-title">Knowledge Base Revamp for Improved UX</h1>
+            <p class="case-card-text">
+              Redesigned the structure and interface of a client knowledge base, 
+              transforming a basic FAQ module into a responsive, intuitive hub for quick 
+              and efficient information access.
+            </p>
           </div>
           <div class="tags-and-button">
             <div class="tag-container">
-              <p>Penis</p>
-              <p>Penis</p>
-              <p>Penis</p>
+              <p>Information Architecture</p>
+              <p>Responsive Design</p>
+              <p>UX Optimization</p>
             </div>
             <a href="/cases/project_template/" class="button large">Read more</a>
           </div>
         </div>
       </div>
-      <div class="case-card">
+      <div class="case-card" id="content-creator">
         <div class="case-thumbnail">
           <img src="/img/shared_assets/case-placeholder.webp" alt="">
         </div>
         <div class="case-content">
           <div class="case-information">
-            <h1 class="case-card-title">Big ol' penis</h1>
-            <p class="case-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra 
-            mauris at turpis sodales, sed placerat felis tincidunt. Integer ac dui 
-            viverra, blandit diam in, commodo ante.</p>
+            <h1 class="case-card-title">Updating Content Creator UI & UX</h1>
+            <p class="case-card-text">
+              Modernized an outdated content creator tool with a cleaner interface and 
+              improved user experience, streamlining the creation process for efficiency 
+              and ease of use.
+            </p>
           </div>
           <div class="tags-and-button">
             <div class="tag-container">
-              <p>Penis</p>
-              <p>Penis</p>
-              <p>Penis</p>
+              <p>UI Design</p>
+              <p>Usability Improvement</p>
+              <p>Workflow Optimization</p>
             </div>
             <a href="/cases/project_template/" class="button large">Read more</a>
           </div>
         </div>
       </div>
-      <div class="case-card">
+      <div class="case-card" id="task-management">
         <div class="case-thumbnail">
           <img src="/img/shared_assets/case-placeholder.webp" alt="">
         </div>
         <div class="case-content">
           <div class="case-information">
-            <h1 class="case-card-title">Big ol' penis penis penis pneis</h1>
-            <p class="case-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra 
-            mauris at turpis sodales, sed placerat felis tincidunt. Integer ac dui 
-            viverra, blandit diam in, commodo ante.</p>
+            <h1 class="case-card-title">Task Management Module</h1>
+            <p class="case-card-text">
+              Designed a task management module for a mobile employee engagement platform,
+               enabling clear task assignment, tracking, and completion in a streamlined 
+               interface.
+            </p>
           </div>
           <div class="tags-and-button">
             <div class="tag-container">
-              <p>Penis</p>
-              <p>Penis</p>
-              <p>Penis</p>
+              <p>Feature Design</p>
+              <p>Mobiel UI/UX</p>
+              <p>Productivity Tools</p>
+            </div>
+            <a href="/cases/project_template/" class="button large">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="case-card" id="minforening">
+        <div class="case-thumbnail">
+          <img src="/img/shared_assets/case-placeholder.webp" alt="">
+        </div>
+        <div class="case-content">
+          <div class="case-information">
+            <h1 class="case-card-title">Association Management App</h1>
+            <p class="case-card-text">
+              Developed the complete UI and UX for an association management app, 
+              streamlining member administration, event coordination, and communication in
+               a user-friendly platform.
+            </p>
+          </div>
+          <div class="tags-and-button">
+            <div class="tag-container">
+              <p>End-to-End UX/UI</p>
+              <p>Member Management</p>
+              <p>Digital Platform Design</p>
+            </div>
+            <a href="/cases/project_template/" class="button large">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="case-card" id="easyr">
+        <div class="case-thumbnail">
+          <img src="/img/shared_assets/case-placeholder.webp" alt="">
+        </div>
+        <div class="case-content">
+          <div class="case-information">
+            <h1 class="case-card-title">EasyR, a mobile Cleaning Service Platform</h1>
+            <p class="case-card-text">
+              Designed a complete mobile platform for booking cleaning services, creating 
+              an intuitive experience that simplifies service selection, scheduling, 
+              and payment.  
+            </p>
+          </div>
+          <div class="tags-and-button">
+            <div class="tag-container">
+              <p>Mobile App Design</p>
+              <p>Booking Flow</p>
+              <p>User-Centered Design</p>
+            </div>
+            <a href="/cases/project_template/" class="button large">Read more</a>
+          </div>
+        </div>
+      </div>
+      <div class="case-card" id="dadiu">
+        <div class="case-thumbnail">
+          <img src="/img/shared_assets/case-placeholder.webp" alt="">
+        </div>
+        <div class="case-content">
+          <div class="case-information">
+            <h1 class="case-card-title">QA & UR for mobile game development</h1>
+            <p class="case-card-text">
+              Led QA and user research for a mobile game project, ensuring a polished 
+              experience through thorough testing, player feedback analysis, and iterative
+               improvements.
+            </p>
+          </div>
+          <div class="tags-and-button">
+            <div class="tag-container">
+              <p>Quality Assurance</p>
+              <p>User Research</p>
+              <p>Iterative Testing</p>
             </div>
             <a href="/cases/project_template/" class="button large">Read more</a>
           </div>
