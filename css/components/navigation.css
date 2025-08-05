@@ -39,6 +39,10 @@
   color: var(--text-color);
 }
 
+.navbar li a.active {
+  font-weight: bolder;
+}
+
 .theme-and-burger {
   display: flex;
   gap: var(--space-sm);

@@ -1,3 +1,7 @@
+<?php
+$currentFolder = basename(dirname($_SERVER['PHP_SELF'])) ?: 'home';
+?>
+
 <nav class="navbar">
   <div class="navbar-content">
     <div class="logo">
@@ -9,10 +13,10 @@
     </div>
     <div class="nav-links">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/cases">Cases</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/" class="<?php echo ($currentFolder === 'home') ? 'active' : ''; ?>">Home</a></li>
+        <li><a href="/cases" class="<?php echo ($currentFolder === 'cases') ? 'active' : ''; ?>">Cases</a></li>
+        <li><a href="/about" class="<?php echo ($currentFolder === 'about') ? 'active' : ''; ?>">About</a></li>
+        <li><a href="/contact" class="<?php echo ($currentFolder === 'contact') ? 'active' : ''; ?>">Contact</a></li>
       </ul>
     </div>
     <div class="theme-and-burger">
