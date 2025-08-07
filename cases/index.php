@@ -62,7 +62,7 @@
       </div>
       <div class="case-card" id="content-creator">
         <div class="case-thumbnail">
-          <img src="/img/shared_assets/case-placeholder.webp" alt="">
+          <img src="card-img/content-creator-card.webp" alt="">
         </div>
         <div class="case-content">
           <div class="case-information">
@@ -79,7 +79,7 @@
               <p>Usability Improvement</p>
               <p>Workflow Optimization</p>
             </div>
-            <a href="/cases/project_template/" class="button large">Read more</a>
+            <a href="/cases/content-creator/" class="button large">Read more</a>
           </div>
         </div>
       </div>

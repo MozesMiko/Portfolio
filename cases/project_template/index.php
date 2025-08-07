@@ -15,7 +15,7 @@
   <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/navigation.php'; ?>
   <?php include $_SERVER['DOCUMENT_ROOT'] . '/img/shared_assets/icons.svg'; ?>
   <div class="content-container top-padding">
-    <a href="/cases/index.html" class="button">
+    <a href="/cases/" class="button">
       <svg>
         <use href="#left-arrow-icon"></use>
       </svg>
