@@ -38,13 +38,35 @@
 
 .case-description h1 {
   margin-bottom: var(--space-m);
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 600;
   line-height: normal;
+}
+
+.case-description h2 {
+  margin-top: var(--space-m);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.margin-bottom {
+  margin-bottom: var(--space-sm);
+}
+
+.case-description ul,
+.case-description ol {
+  margin: var(--space-m) 0;
+}
+
+.case-description li {
+  margin-bottom: var(--space-s);
 }
 
 .case-description section {
   scroll-margin-top: 4.625rem;
   margin-bottom: var(--space-l);
+  counter-reset: section;
 }
 
 .case-description section:last-of-type {
@@ -54,6 +76,50 @@
 .case-description li {
   font-family: 'Figtree', sans-serif;
 }
+
+.bold {
+  font-weight: 600;
+}
+
+/* #region - Numbered point */
+
+.numbered-point {  
+  counter-increment: section;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-m);
+}
+
+.point-content p:first-child {
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding-bottom: var(--space-xs);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.numbered-point::before {
+  font-family: 'Poppins';
+  content: counter(section);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75em;
+  height: 1.75em;
+  background: var(--point-number);
+  color: white;
+  font-weight: bold;
+  font-size: 0.875rem;
+  border-radius: var(--border-radius-xxs);
+  margin-right: 0.125rem;
+  flex-shrink: 0; 
+}
+
+/* #endregion - Numbered point */
+
+/* #region - Case index */
 
 .case-index { 
   position: relative;
@@ -158,6 +224,11 @@ html.dark .case-index li.active ::after {
   content: url(/img/case-page/check-white.svg);
 }
 
+/* #endregion - Case index */
+
+/* #region - Image modal */
+
+
 .case-description img {
   margin: var(--space-l) 0rem;
   border-radius: var(--border-radius-s);
@@ -220,6 +291,10 @@ html.dark .case-index li.active ::after {
   overflow: hidden;
 }
 
+/* #endregion - CTA element */
+
+/* #region - CTA element */
+
 .cta-container {
   display: flex;
   gap: var(--space-lm);
@@ -244,11 +319,13 @@ html.dark .case-index li.active ::after {
   justify-content: flex-end;
 }
 
-.case-image {
+/* #endregion - CTA element */
+
+/* .case-image {
   border-radius: var(--border-radius-xs);
   border: 1px solid rgba(0, 0, 0, 0.10);
   overflow: hidden;
-}
+} */
 
 @media (max-width: 767px) {
   .content-and-index {

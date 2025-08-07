@@ -39,7 +39,7 @@
     <div class="card-container">
       <div class="case-card" id="knowledge-base">
         <div class="case-thumbnail">
-          <img src="/img/shared_assets/case-placeholder.webp" alt="">
+          <img src="card-img/knowledge-base-card.webp" alt="">
         </div>
         <div class="case-content">
           <div class="case-information">
@@ -56,7 +56,7 @@
               <p>Responsive Design</p>
               <p>UX Optimization</p>
             </div>
-            <a href="/cases/project_template/" class="button large">Read more</a>
+            <a href="/cases/knowledge_base/" class="button large">Read more</a>
           </div>
         </div>
       </div>

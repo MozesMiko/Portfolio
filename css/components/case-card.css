@@ -15,7 +15,7 @@
   padding: var(--space-l);
   align-self: stretch;
   flex-shrink: 0;
-  max-width: 100%;
+  max-width: 400px;
   height: auto;
   opacity: 1;
   transition: all 0.01s ease;
@@ -88,7 +88,7 @@
   }
 
   .case-thumbnail {
-    width: 100%;
+    max-width: 100%;
   }
 
   .case-thumbnail img {
@@ -129,7 +129,7 @@
 
 .view-small .case-thumbnail {
   padding: 0rem;
-  max-width: 45%;
+  max-width: 50%;
 }
 
 .view-small .case-thumbnail img {
@@ -139,7 +139,7 @@
 
 .view-small .case-card h1 {
   font-size: 1.25rem;
-  line-height: 1.8;
+  line-height: 1.5;
   padding: 0px;
 }
 

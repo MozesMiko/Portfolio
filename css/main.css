@@ -199,6 +199,7 @@ h1, h2, h3, h4, h5, h6 {
   --ghost-button-text: var(--text-color);
   --ghost-button-hover: var(--grayscale-20);
   --modal-background:	#000000D9;
+  --point-number: #476385;
 
   --transition-delay: 0.5s
 }
