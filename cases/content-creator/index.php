@@ -195,7 +195,9 @@
             <div class="point-content">              
               <p>Redesigned post settings panel as a right-aligned accordion.</p>
               <p>
-                Clean look, easy access.
+                Clean look, easy access. "Post expiration" was removed as users found it 
+                confusing and was a rarely used feature. Each setting opens in its own
+                modal.
               </p>
             </div>
           </div>
@@ -209,6 +211,8 @@
               </p>
             </div>
           </div>
+          <img class="case-desc-img" src="img/content-creator-publishing.webp" alt=""
+          loading="lazy">
         </section>
         <section id="file-organization">
           <h1>Design File Organization</h1>
@@ -223,8 +227,6 @@
           <p>
             This made the design file more modular and dev-friendly.
           </p>
-          <img class="case-desc-img" src="img/content-creator-design-file.webp" alt=""
-          loading="lazy">
         </section>
         <section id="testing">
           <h1>Validation and Testing</h1>
@@ -274,6 +276,28 @@
           </p>
           <img class="case-desc-img" src="img/content-creator-new.webp" alt=""
           loading="lazy">
+        </section>
+        <section id="figma-prototype">
+          <h1>Check out the prototype</h1>
+          <p>
+            Below is the interactive Figma prototype showcasing the redesigned content 
+            creator. It highlights the streamlined editing flow, simplified post settings,
+             and overall layout improvements based on user feedback. You can explore how 
+             different content types are added, how the interface adapts for long-form 
+             posts, and how key actions like previewing and publishing are handled.
+            <br>
+            This prototype was used throughout user testing and internal reviews to 
+            validate design decisions and ensure alignment between design, development, 
+            and user expectations.
+          </p>
+          <iframe 
+           loading="lazy"
+           style="border: 1px solid rgba(0, 0, 0, 0.1);
+           margin-top: 24px" width="100%" height="450"
+           
+           src="https://embed.figma.com/design/rGUiYkC5PBHMlcjvAzCEsh/Mozes-Miko---Content-Creator?node-id=345-16&embed-host=share" 
+           allowfullscreen>
+          </iframe>
         </section>
       </div>
     </div>

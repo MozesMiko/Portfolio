@@ -56,7 +56,7 @@
               <p>Responsive Design</p>
               <p>UX Optimization</p>
             </div>
-            <a href="/cases/knowledge_base/" class="button large">Read more</a>
+            <a href="/cases/knowledge-base/" class="button large">Read more</a>
           </div>
         </div>
       </div>
