@@ -39,7 +39,7 @@
     <div class="card-container">
       <div class="case-card" id="knowledge-base">
         <div class="case-thumbnail">
-          <img src="card-img/knowledge-base-card.webp" alt="">
+          <img src="/cases/card-img/knowledge-base-card.webp" alt="">
         </div>
         <div class="case-content">
           <div class="case-information">
@@ -62,7 +62,7 @@
       </div>
       <div class="case-card" id="content-creator">
         <div class="case-thumbnail">
-          <img src="card-img/content-creator-card.webp" alt="">
+          <img src="/cases/card-img/content-creator-card.webp" alt="">
         </div>
         <div class="case-content">
           <div class="case-information">
@@ -85,7 +85,7 @@
       </div>
       <div class="case-card" id="task-management">
         <div class="case-thumbnail">
-          <img src="/img/shared_assets/case-placeholder.webp" alt="">
+          <img src="/cases/card-img/task-manager-card.webp" alt="">
         </div>
         <div class="case-content">
           <div class="case-information">
@@ -99,16 +99,16 @@
           <div class="tags-and-button">
             <div class="tag-container">
               <p>Feature Design</p>
-              <p>Mobiel UI/UX</p>
+              <p>Mobile UI/UX</p>
               <p>Productivity Tools</p>
             </div>
-            <a href="/cases/project_template/" class="button large">Read more</a>
+            <a href="/cases/task-manager/" class="button large">Read more</a>
           </div>
         </div>
       </div>
       <div class="case-card" id="minforening">
         <div class="case-thumbnail">
-          <img src="/img/shared_assets/case-placeholder.webp" alt="">
+          <img src="/cases/card-img/pwnia.png" alt="">
         </div>
         <div class="case-content">
           <div class="case-information">
@@ -125,7 +125,7 @@
               <p>Member Management</p>
               <p>Digital Platform Design</p>
             </div>
-            <a href="/cases/project_template/" class="button large">Read more</a>
+            <a href="#" class="button large">Coming soon</a>
           </div>
         </div>
       </div>
@@ -148,13 +148,13 @@
               <p>Booking Flow</p>
               <p>User-Centered Design</p>
             </div>
-            <a href="/cases/project_template/" class="button large">Read more</a>
+            <a href="#" class="button large">Coming soon</a>
           </div>
         </div>
       </div>
       <div class="case-card" id="dadiu">
         <div class="case-thumbnail">
-          <img src="/img/shared_assets/case-placeholder.webp" alt="">
+          <img src="/cases/card-img/hold-me-closer-card.webp" alt="">
         </div>
         <div class="case-content">
           <div class="case-information">
@@ -171,7 +171,7 @@
               <p>User Research</p>
               <p>Iterative Testing</p>
             </div>
-            <a href="/cases/project_template/" class="button large">Read more</a>
+            <a href="/cases/gamedev" class="button large">Read more</a>
           </div>
         </div>
       </div>

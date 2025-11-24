@@ -44,45 +44,51 @@
         <h1>Cases</h1>
         <a href="/cases/" class="button large wide">See more</a>
       </div>
-      <div class="case-card">
+      <div class="case-card" id="content-creator">
         <div class="case-thumbnail">
-          <img src="/img/shared_assets/case-placeholder.webp" alt="">
+          <img src="/cases/card-img/content-creator-card.webp" alt="">
         </div>
         <div class="case-content">
           <div class="case-information">
-            <h1>Big ol' penis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra 
-            mauris at turpis sodales, sed placerat felis tincidunt. Integer ac dui 
-            viverra, blandit diam in, commodo ante.</p>
+            <h1 class="case-card-title">Updating Content Creator UI & UX</h1>
+            <p class="case-card-text">
+              Modernized an outdated content creator tool with a cleaner interface and 
+              improved user experience, streamlining the creation process for efficiency 
+              and ease of use.
+            </p>
           </div>
           <div class="tags-and-button">
             <div class="tag-container">
-              <p>Penis</p>
-              <p>Penis</p>
-              <p>Penis</p>
+              <p>UI Design</p>
+              <p>Usability Improvement</p>
+              <p>Workflow Optimization</p>
             </div>
-            <a href="/cases/project_template/" class="button large">Read more</a>
+            <a href="/cases/content-creator/" class="button large">Read more</a>
           </div>
         </div>
       </div>
-      <div class="case-card">
-        <div class="case-thumbnail">
-          <img src="/img/shared_assets/case-placeholder.webp" alt="">
-        </div>
-        <div class="case-content">
-          <div class="case-information">
-            <h1>Big ol' penis</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra 
-            mauris at turpis sodales, sed placerat felis tincidunt. Integer ac dui 
-            viverra, blandit diam in, commodo ante.</p>
+      <div class="card-container">
+        <div class="case-card" id="knowledge-base">
+          <div class="case-thumbnail">
+            <img src="/cases/card-img/knowledge-base-card.webp" alt="">
           </div>
-          <div class="tags-and-button">
-            <div class="tag-container">
-              <p>Penis</p>
-              <p>Penis</p>
-              <p>Penis</p>
+          <div class="case-content">
+            <div class="case-information">
+              <h1 class="case-card-title">Knowledge Base Revamp for Improved UX</h1>
+              <p class="case-card-text">
+                Redesigned the structure and interface of a client knowledge base, 
+                transforming a basic FAQ module into a responsive, intuitive hub for quick 
+                and efficient information access.
+              </p>
             </div>
-            <a href="/cases/project_template/" class="button large">Read more</a>
+            <div class="tags-and-button">
+              <div class="tag-container">
+                <p>Information Architecture</p>
+                <p>Responsive Design</p>
+                <p>UX Optimization</p>
+              </div>
+              <a href="/cases/knowledge-base/" class="button large">Read more</a>
+            </div>
           </div>
         </div>
       </div>

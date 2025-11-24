@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/css/main.css">  
   <link rel="stylesheet" href="/css/pages/case-page.css">
   <link rel="stylesheet" href="/css/components/button.css">
-  <title>Project template</title>
+  <title>Task Manager</title>
 </head>
 <body class="case-page">
   <?php include $_SERVER['DOCUMENT_ROOT'] . '/components/navigation.php'; ?>
@@ -21,8 +21,8 @@
       </svg>
       Back to cases
     </a>
-    <img class="case-header-img" src="case-placeholder-img.webp" alt="">
-    <h1>This is a big ol' penis right here, boi</h1>
+    <img class="case-header-img" src="img/task-manager-hero.webp" alt="">
+    <h1>Task Management Module</h1>
     <div class="content-and-index">
       <div class="case-index">
         <noscript style="text-align: center;">
@@ -40,167 +40,205 @@
       <div class="case-description">
         <section id="overview">
           <h1>Overview</h1>
-          <p>
-            Our team set out to redesign a content management system (CMS) used by 
-            administrators to schedule and publish updates to a company-wide internal 
-            platform. The existing system lacked clarity, had an outdated UI, and was 
-            cumbersome to use. Our goal was to improve usability, streamline workflows, 
-            and create a more intuitive interface for content scheduling and post settings
-            .
+          <p class="margin-bottom">
+            The client needed a task manager module for our mobile app to help employees 
+            organize and complete daily tasks more efficiently. While the initial ask was 
+            a simple to-do list, the long-term goal was to support more complex workflows 
+            like recurring tasks, team assignments, and tracking.
           </p>
-          <img class="case-desc-img" src="/img/case-page/desk.webp" alt="">
-        </section>
-        <section id="background">
-          <h1>Background</h1>
-          <p>
-            The CMS was originally designed as an add-on to a larger platform but had 
-            grown into a critical tool for administrators. However, as new features were 
-            added, the interface became cluttered, and users struggled to complete simple 
-            tasks like scheduling posts or editing drafts. Through feedback from users and
-             stakeholders, we identified pain points and opportunities for improvement.
+          <p class="margin-bottom">
+            I led UX research, design, prototyping, testing, and documentation. Despite 
+            unclear requirements and shifting priorities, I delivered a tested MVP and 
+            helped lay the groundwork for internal process improvements like a design 
+            system and better developer handoff.
           </p>
-          <img class="case-desc-img" src="/img/case-page/gameboy.webp" alt="">
+          <!-- <p>
+            Designs shown here have been reworked post-project to reflect the intended UI 
+            direction, unconstrained by the time and resource limitations of the original 
+            engagement.
+          </p> -->
         </section>
-        <section id="research">
-          <h1>Research and competitive analysis</h1>
+        <section id="challenge">
+          <h1>The Challenge</h1>
           <p>
-            To better understand industry standards and user expectations, we conducted a 
-            competitive analysis of similar CMS platforms, including WordPress, 
-            Contentful, and Medium. We examined their approaches to scheduling, draft 
-            management, and post organization. This helped us identify best practices, 
-            such as clear visual hierarchies, real-time previews, and flexible scheduling 
-            options.
+            The project was challenging from the outset. Stakeholders declined user 
+            interviews, stating they wanted a design first and then we'd discuss the next
+            steps. This meant starting the design without access to user needs, workflows,
+             or technological context. To add to the complexity:
           </p>
-        </section>
-        <section id="user-interviews">
-          <h1>User interviews</h1>
+          <ul>
+            <li>We had no design system or component library at this point</li>
+            <li>Many UI elements in the live app were deprecated or undocumented.</li>
+            <li>
+              The UI had to be simple enough to function as a module of a larger solution,
+              something dedicated task management applications do not have to worry about.
+            </li>
+            <li>
+              Communication with the client was managed by a project manager who excluded 
+              design from key decisions.
+            </li>
+            <li>
+              Late-stage scope creep transformed the project from a module into a 
+              full-featured task management platform.
+            </li>
+          </ul>
           <p>
-            We interviewed five administrators who regularly used the CMS. Our goal was to
-             understand their workflows, frustrations, and desired improvements. We asked 
-             questions about their daily tasks, challenges they faced, and features they 
-             wished they had. The insights from these interviews directly informed our 
-             design decisions.
-          </p>
-        </section>
-        <section id="findings">
-          <h1>Findings</h1>
-          <p>
-            From our research and interviews, we identified key pain points:
-            <ul>
-              <li>
-                The post-scheduling system was confusing, leading to missed or duplicated 
-                updates.
-              </li>
-              <li>
-                Users had difficulty finding drafts and past posts due to a lack of 
-                filtering and search options.
-              </li>
-              <li>
-                The UI was cluttered, making it hard to locate key functions.
-              </li>
-              <li>
-                There was no clear indication of post status (draft, scheduled, published,
-                 archived).
-              </li>
-            </ul>
-            These insights guided our redesign strategy.
+            Despite all of this, I focused on grounding the design in research, iterative
+             validation, and user experience best practices.
           </p>
         </section>
-        <section id="interface-mockups">
-          <h1>Interface mockups</h1>
+        <section id="process">
+          <h1>Process</h1>
+          <h2 class="margin-bottom">Research & Benchmarking</h2>
+          <p class="margin-bottom">
+            Since I couldn’t interview end-users, I conducted a competitive analysis of 
+            tools like Trello, Monday, Any.do, and Microsoft To Do. I mapped out common 
+            features, interaction patterns, and core use cases to understand the industry 
+            standard and avoid overcomplicating the MVP.
+          </p>
           <p>
-            Using Figma, we created wireframes to explore different layout possibilities. 
-            We tested various navigation structures, post organization methods, and 
-            scheduling interfaces. Low-fidelity prototypes helped us validate our ideas 
-            before moving to high-fidelity designs.
+            I worked with the PM to define an initial feature set centered around:
+          </p>
+          <ul>
+            <li>Task lists (one-time or recurring)</li>
+            <li>Completion and block states</li>
+            <li>Manager and user roles</li>
+            <li>Lightweight flows optimized for mobile use</li>
+          </ul>
+          <h2 class="margin-bottom">Wireframing & Scoping</h2>
+          <p class="margin-bottom">
+            This was my first project at the company, and I quickly ran into 
+            inconsistencies across existing modules. Since we didn't have a design system 
+            or a component library, I had to replicate UI elements based on screenshots I 
+            took while exploring the app. I found out that our live app featured UI 
+            elements that were either deprecated and were replaced by slightly changed
+            versions in some modules (but not others), or the elements were custom created
+            for specific clients.
+             
+          </p>
+          <p>
+            Since the Task Management module was a big depearture from the current content
+            of our app, it became clear that existing UI elements and interaction patterns
+            will not be sufficient in the long run. This prompted a key conversation with 
+            developers and project management: could we introduce new patterns?
+            I argued for modern interaction design—bottom sheets for quick content 
+            previews, floating action buttons for task creation, and gesture-based task 
+            completion. These improvements were approved after discussion, and I refined 
+            the wireframes accordingly.
+          </p>
+          <img src="img/task-manager-wireframes.webp" alt="" class="case-desc-img">
+        </section>
+        <section id="design">
+          <h1>High-Fidelity Design & MVP</h1>
+          <p>
+            With the wireframes validated, I built the MVP prototype in Figma. 
+            Core flows included:
+          </p>
+          <ol>
+            <li>Managers creating task lists</li>
+            <li>Managers adding tasks</li>
+            <li>Users marking tasks as complete or blocked</li>
+          </ol>
+          <p>
+            While the MVP was functional, it lacked deletion controls and reminders—small 
+            issues that were resolved in a quick iteration. The client approved the design
+             and greenlit further work.
+          </p>
+          <img src="img/task-manager-mvp.webp" alt="" class="case-desc-img">
+        </section>
+        <section id="scope-creep">
+          <h1>Scope Creep & Redesign</h1>
+          <p class="margin-bottom">
+            Just before development began, the client introduced new requirements: 
+              <span class="italic">notifications, due dates, employee groups, assignments,
+                 attachments, priorities, comments, tags, collaboration features, quick 
+                 tasks, and task templates</span>. I had less than one sprint to redesign 
+                 and expand the module to account for these.
+          </p>
+          <p>
+            Some features were straightforward, while others introduced UX and technical 
+            complexity (e.g., recurring task deadlines). To prevent deadline conflicts,
+              I proposed simplifying the recurrence logic and eliminating deadline dates 
+              in recurring lists. We documented and tracked features to be phased in 
+              later, and some (e.g., tags, templates) were ultimately shelved or delayed 
+              due to complexity.
           </p>
         </section>
-        <section id="new-design">
-          <h1>Creating the new designs</h1>
+        <section id="user-testing">
+          <h1>User Testing</h1>
           <p>
-            Our final design featured:
-            <ul>
-              <li>
-                A calendar-based scheduling system for a clear overview of upcoming posts.
-              </li>
-              <li>
-                A streamlined post creation workflow, reducing steps to publish or 
-                schedule content.
-              </li>
-              <li>
-                Improved filtering and search functionality to quickly find drafts and 
-                past posts.
-              </li>
-              <li>
-                Visual indicators for post status to minimize confusion.
-              </li>
-            </ul>
+            Even without access to end users, I performed usability testing internally:
+              <ol>
+                <li>
+                  <span class="bold">Participants:</span> Colleagues unfamiliar with the 
+                  project
+                </li>
+                <li>
+                  <span class="bold">Method:</span> Task-based testing in Figma on mobile 
+                  devices
+                </li>
+                <li>
+                  <span class="bold">Focus:</span> Task creation, interaction, and 
+                  recurrence usability
+                </li>
+                <li>
+                  <span class="bold">Evaluation:</span> I documented results in a matrix 
+                  (correct/incorrect answers, pain points, suggestions)
+                </li>
+              </ol>
           </p>
+          <p class="margin-bottom">
+            I also A/B tested recurrence settings to determine the most intuitive 
+            configuration, leading to more streamlined task list creation.
+          </p>
+          <p class="margin-bottom">
+            All responses, notes, and observations gathered during user testing were 
+            arranged in a matrix to help visualize the usability and state of the MVP. 
+            This helped get an easier overview as to which aspect of the user flows needed
+            to be addressed.
+          </p>
+          <p>
+            Feedback showed that the module was easy to understand across tech literacy 
+            levels, and iterative improvements followed each round of testing.
+          </p>
+          <img src="img/task-manager-userreaserch.webp" alt="" class="case-desc-img">
         </section>
-        <section id="organizing">
-          <h1>Organizing the design file</h1>
-          <p>
-            To maintain efficiency, we structured the design file with clear sections:
-            <ul>
-              <li>
-                A component library with reusable UI elements.
-              </li>
-              <li>
-                Separate pages for wireframes, mockups, and final designs.
-              </li>
-              <li>
-                Version history tracking to document design changes.
-              </li>
-            </ul>
+        <section id="final-outcome">
+          <h1>Final Outcome</h1>
+          <p class="margin-bottom">
+            The task manager module was implemented and adopted by the client. Key usage 
+            metrics showed daily engagement, and leadership saw potential for expanding 
+            task visibility across locations. While some features were pruned, we 
+            established a clear roadmap for future development.
           </p>
+          <p>
+            However, implementation diverged in places due to uncommunicated changes from 
+            the PM, causing mismatches between design and build. This emphasized the 
+            importance of better alignment going forward.
+          </p>
+          <img src="img/task-manager-final.webp" alt="" class="case-desc-img">
         </section>
-        <section id="post-settings">
-          <h1>Post settings</h1>
-          <p>
-            We improved the post settings panel to be more user-friendly, including:
-            <ul>
-              <li>
-                Flexible scheduling options (immediate, future date, recurring posts).
-              </li>
-              <li>
-                Custom visibility settings for targeting specific teams or departments.
-              </li>
-              <li>
-                A preview mode to see how posts would appear before publishing.
-              </li>
-            </ul>
+        <section id="reflection">
+          <h1>Reflection</h1>
+          <p class="margin-bottom">
+            This project taught me how to design under ambiguity, advocate for scalable 
+            solutions, and stay user-focused even when removed from the user. It was a 
+            practical lesson in stakeholder management, UI consistency, and rapid 
+            iteration under pressure.
           </p>
-        </section>
-        <section id="validation">
-          <h1>Validation</h1>
-          <p>
-            To test our designs, we conducted usability testing with five administrators. 
-            Results showed:
-            <ul>
-              <li>
-                A 40% reduction in time spent scheduling posts.
-              </li>
-              <li>
-                A 30% decrease in user errors related to post visibility and status.
-              </li>
-              <li>
-                Positive feedback on the intuitive layout and improved search 
-                functionality.
-              </li>
-            </ul>
+          <p class="margin-bottom">
+            While the process wasn’t ideal, the outcome demonstrated that even in 
+            difficult situations, good UX practices can lead to solid solutions and 
+            organizational change.
           </p>
-        </section>
-        <section id="conclusion">
-          <h1>Conclusion</h1>
           <p>
-            The redesigned CMS significantly improved the user experience, making content 
-            scheduling and management more efficient. By focusing on user needs and 
-            industry best practices, we created an intuitive, streamlined system that 
-            reduced frustration and increased productivity for administrators. Future 
-            iterations will include additional analytics features to track post engagement
-             and user interactions.
+            The challenges I faced during this project ended up being a push for lasting 
+            change. I called attention to inefficiencies like unclear requirements, 
+            limited user access, and outdated components, and pushed for better ways of 
+            working. It set the stage for more structure, stronger collaboration, and a 
+            focus on user needs that carried over into future projects.
           </p>
-          <img class="case-desc-img" src="/img/case-page/gameboy.webp" alt="">
+          <img src="img/task-manager-impact.webp" alt="" class="case-desc-img">
         </section>
       </div>
     </div>

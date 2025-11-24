@@ -5,7 +5,7 @@ $currentFolder = basename(dirname($_SERVER['PHP_SELF'])) ?: 'home';
 <nav class="navbar">
   <div class="navbar-content">
     <div class="logo">
-      <a href="index.html">
+      <a href="/">
         <svg>
           <use href="#personal-logo"></use>
         </svg>

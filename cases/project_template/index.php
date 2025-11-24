@@ -21,7 +21,7 @@
       </svg>
       Back to cases
     </a>
-    <img class="case-header-img" src="case-placeholder-img.webp" alt="">
+    <img class="case-header-img" src="img/case-placeholder-img.webp" alt="">
     <h1>This is a big ol' penis right here, boi</h1>
     <div class="content-and-index">
       <div class="case-index">
