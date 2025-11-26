@@ -37,6 +37,29 @@
       </div>
     </div>
     <div class="card-container">
+      <div class="case-card" id="minforening">
+        <div class="case-thumbnail">
+          <img src="/cases/card-img/minforening-card.webp" alt="">
+        </div>
+        <div class="case-content">
+          <div class="case-information">
+            <h1 class="case-card-title">Club Management App Redesign</h1>
+            <p class="case-card-text">
+              Redesigned the complete UI and UX for an association management app, 
+              streamlining member and event administration, and communication in
+               a user-friendly platform.
+            </p>
+          </div>
+          <div class="tags-and-button">
+            <div class="tag-container">
+              <p>End-to-End UX/UI</p>
+              <p>Member Management</p>
+              <p>Digital Platform Design</p>
+            </div>
+            <a href="/cases/association-management/" class="button large">Read more</a>
+          </div>
+        </div>
+      </div>
       <div class="case-card" id="knowledge-base">
         <div class="case-thumbnail">
           <img src="/cases/card-img/knowledge-base-card.webp" alt="">
@@ -103,29 +126,6 @@
               <p>Productivity Tools</p>
             </div>
             <a href="/cases/task-manager/" class="button large">Read more</a>
-          </div>
-        </div>
-      </div>
-      <div class="case-card" id="minforening">
-        <div class="case-thumbnail">
-          <img src="/cases/card-img/pwnia.png" alt="">
-        </div>
-        <div class="case-content">
-          <div class="case-information">
-            <h1 class="case-card-title">Association Management App</h1>
-            <p class="case-card-text">
-              Developed the complete UI and UX for an association management app, 
-              streamlining member administration, event coordination, and communication in
-               a user-friendly platform.
-            </p>
-          </div>
-          <div class="tags-and-button">
-            <div class="tag-container">
-              <p>End-to-End UX/UI</p>
-              <p>Member Management</p>
-              <p>Digital Platform Design</p>
-            </div>
-            <a href="#" class="button large">Coming soon</a>
           </div>
         </div>
       </div>
